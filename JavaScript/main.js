@@ -6,10 +6,10 @@
 
   app.controller('PortraitsCtrlr', ['$http', function($http){
     this.pictures = pics;
-    this.loadItems = function(){
+    this.loadItems = function(this.pictures.length){
       for(var i = 0; i<50; i++){
         var item = {};
-        item.index = i;
+        item.index = ori + i;
         item.content = new Date();
         this.pictures.push(item);
       }
