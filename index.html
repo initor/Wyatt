@@ -9,12 +9,6 @@
 <body ng-app="WyattIn">
   <div ng-controller="PortraitsCtrlr as Ctrlr">
     <div layout="column" layout-gt-md="row">
-      <div flex>
-        I'm above on mobile, and to the left on larger devices.
-      </div>
-      <div flex>
-        I'm below on mobile, and to the right on larger devices.
-      </div>
       <div infinite-scroll="Ctrlr.loadItems()">
         <div flex ng-repeat="pic in Ctrlr.pictures">Item number {{ pic.index }}: {{ pic.content }}</div>
       </div>
