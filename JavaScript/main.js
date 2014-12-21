@@ -10,7 +10,7 @@
       for(var i = 0; i<50; i++){
         var item = {};
         item.index = i;
-        item.content = "LastSync: " + new Date().today() + " @ " + new Date().timeNow();
+        item.content = new Date();
         this.pictures.push(item);
       }
     };
