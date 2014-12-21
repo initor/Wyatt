@@ -7,7 +7,7 @@
   app.controller('PortraitsCtrlr', ['$http', function($http){
     var ctrl = this;
     ctrl.loadItems = function(){
-      for(int i = 0; i<50; i++){
+      for(var i = 0; i<50; i++){
         var item = {};
         item.index = i;
         item.content = 'YOYOYO, this is the ' + i + ' item!';
@@ -18,7 +18,7 @@
 
   app.items = [];
 
-  for(int i = 0; i<50; i++){
+  for(var i = 0; i<50; i++){
     var item = {};
     item.index = i;
     item.content = 'YOYOYO, this is the ' + i + ' item!';
