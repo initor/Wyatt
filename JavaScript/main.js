@@ -5,24 +5,24 @@
   var app = angular.module('WyattIn', ['ngMaterial', 'infinite-scroll']);
 
   app.controller('PortraitsCtrlr', ['$http', function($http){
-    var ctrl = this;
+    this.pictures = pics;
     ctrl.loadItems = function(){
       for(var i = 0; i<50; i++){
         var item = {};
         item.index = i;
         item.content = 'YOYOYO, this is the ' + i + ' item!';
-        items.push(item);
+        this.pictures.push(item);
       }
     };
   }]);
 
-  app.items = [];
+  app.pics = [];
 
   for(var i = 0; i<50; i++){
     var item = {};
     item.index = i;
     item.content = 'YOYOYO, this is the ' + i + ' item!';
-    items.push(item);
+    pics.push(item);
   }
 
 })();
