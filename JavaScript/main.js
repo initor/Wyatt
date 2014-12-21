@@ -5,7 +5,7 @@
   var app = angular.module('WyattIn', ['ngMaterial', 'infinite-scroll']);
 
   app.controller('PortraitsCtrlr', ['$http', function($http){
-    var ctrl = $this;
+    var ctrl = this;
     ctrl.loadItems = function(){
       for(int i = 0; i<50; i++){
         var item = {};
