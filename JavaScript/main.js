@@ -6,12 +6,11 @@
 
   app.controller('PortraitsCtrlr', ['$http', function($http){
     this.pictures = pics;
-    var newDate = new Date();
     this.loadItems = function(){
       for(var i = 0; i<50; i++){
         var item = {};
         item.index = i;
-        item.content = "LastSync: " + newDate.today() + " @ " + newDate.timeNow();
+        item.content = "LastSync: " + new Date().today() + " @ " + new Date().timeNow();
         this.pictures.push(item);
       }
     };
