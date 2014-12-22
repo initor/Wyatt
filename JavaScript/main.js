@@ -10,7 +10,7 @@
 
     this.loadItems = function(){
       var tempLoadPics = [];
-      for(var i = 0; i<4; i++){
+      for(var i = 0; i<16; i++){
         var item = {};
         item.index = indexOfPics;
         indexOfPics++;
