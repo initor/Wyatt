@@ -17,7 +17,7 @@
     <div layout="column" layout-align="space-around center" layout-margin layout-fill layout-padding infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1">
         <div flex ng-repeat="pic in Ctrlr.pictures">
           <p>Item <span style="font-weight: bold">#{{ pic.index }}</span></p>
-          <p>Last Sync: {{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</p>
+          <p>Last Sync: <span style="font-weight: bold; color: #B71C1C;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span></p>
         </div>
     </div>
   </div>
