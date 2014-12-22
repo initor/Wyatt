@@ -1,8 +1,12 @@
 html, body {
-  background-color: #f2f2f2;
+	background-color: #f2f2f2;
 }
 
 .tile {
-  border-radius: 2px;
-  background-color: #fff;
+	border-radius: 2px;
+	background-color: #fff;
+}
+
+.title, .footer {
+	padding-left: 10px;
 }
