@@ -150,10 +150,12 @@
  	font-size: 1em;
  	font-weight: normal;
  	font-style: normal;
+ 	margin-top: 20px;
  }
 
  .tile-footer h3 {
  	font-size: 2em;
  	line-height: 1.125;
  	font-weight: 200;
+ 	margin: 0px;
  }
