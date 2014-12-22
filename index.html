@@ -8,7 +8,7 @@
 </head>
 <body ng-app="WyattIn">
   <div ng-controller="PortraitsCtrlr as Ctrlr">
-    <div layout="row" layout-sm="column" infinite-scroll="Ctrlr.loadItems()">
+    <div layout="column" infinite-scroll="Ctrlr.loadItems()">
         <div flex="50" ng-repeat="pic in Ctrlr.pictures">
           Item #{{ pic.index }}: Last Sync @{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}
         </div>
