@@ -27,7 +27,7 @@
 
   var pics = [];
   var indexOfPics = 0;
-  var urlOfDemeImg = 'http://images.apple.com/live/2014-sept-event/images/b920a3040b8d0d31f8b0d938e1566557c6deb479_xlarge.jpg';
+  var urlOfDemeImg = 'http://farm3.staticflickr.com/2807/9317135155_0a078a007e_k.jpg';
 
   var initialLoadPics = [];
   for(var i = 0; i<10; i++){
