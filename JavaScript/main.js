@@ -9,7 +9,7 @@
     ctl.pictures = pics;
 
     this.loadItems = function(){
-      for(var i = 0; i<50; i++){
+      for(var i = 0; i<4; i++){
         var item = {};
         item.index = ctl.pictures.length + i;
         item.content = new Date();
@@ -20,7 +20,7 @@
 
   var pics = [];
 
-  for(var i = 0; i<50; i++){
+  for(var i = 0; i<4; i++){
     var item = {};
     item.index = i;
     item.content = 'YOYOYO, this is the ' + i + ' item!';
