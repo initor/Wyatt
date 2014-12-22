@@ -13,7 +13,7 @@
     ctl.pictures = [];  
     var initialLoadPics = [];
 
-    $http.get('http://api.flickr.com/services/feeds/groups_pool.gne?id=998875@N22&lang=en-us&format=json&jsoncallback=?')
+    $http.get('https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=eb6e83fd2b255ab9adfef687f4c18e63&user_id=30414895@N07&format=json&per_page=20')
     .success(function(data, status, header, config){
       angular.foreach(data.items, function(item, key){
         var urlOfPic = (item.media.m);
