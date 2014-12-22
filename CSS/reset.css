@@ -3,8 +3,11 @@ html, body {
 }
 
 .feed {
-  width: 655px;
-  height: 610px;
   border-radius: 2px;
   background-color: #fff;
+}
+
+[flex] {
+  width: 655px;
+  height: 610px;
 }
