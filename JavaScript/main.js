@@ -16,7 +16,7 @@
     $http.get('http://api.flickr.com/services/feeds/groups_pool.gne?id=998875@N22&lang=en-us&format=json&jsoncallback=?')
     .success(function(data, status, header, config){
       angular.foreach(data.items, function(item, key){
-        var urlOfPic = (item.media.m).replace("_m.jpg", ".jpg");
+        var urlOfPic = (item.media.m);
         var i = {};
         item.index = indexOfPics;
         indexOfPics++;
