@@ -5,21 +5,18 @@ html, body {
 @media (min-width: 640px) {
 	.tile {
 		width: 319px;
-		height: 445px;
 	}
 }
 
 @media (min-width: 1024px) {
 	.tile {
 		width: 447px;
-		height: 480px;
 	}
 }
 
 @media (min-width: 1280px) {
 	.tile {
 		width: 655px;
-		height: 610px;
 	}
 }
 
