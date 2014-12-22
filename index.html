@@ -17,7 +17,11 @@
   <div ng-controller="PortraitsCtrlr as Ctrlr">
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1">
     <div layout="row" ng-repeat="pic in Ctrlr.pictures" layout-margin layout-fill layout-padding >
-        <div class="tile" flex flex-order="{{ pic.index + 1 }}">
+        <div class="tile" flex>
+          <p>Item <span style="font-weight: bold">#{{ pic.index }}</span></p>
+          <p>YoYoYo, last sync: <span style="font-weight: bold; color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span></p>
+        </div>
+        <div class="tile" flex>
           <p>Item <span style="font-weight: bold">#{{ pic.index }}</span></p>
           <p>YoYoYo, last sync: <span style="font-weight: bold; color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span></p>
         </div>
