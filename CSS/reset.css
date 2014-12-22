@@ -3,27 +3,27 @@ html, body {
 }
 
 @media (min-width: 640px) {
-	.feed {
+	.tile {
 		width: 319px;
 		height: 445px;
 	}
 }
 
 @media (min-width: 1024px) {
-	.feed {
+	.tile {
 		width: 447px;
 		height: 480px;
 	}
 }
 
 @media (min-width: 1280px) {
-	.feed {
+	.tile {
 		width: 655px;
 		height: 610px;
 	}
 }
 
-.feed {
+.tile {
   border-radius: 2px;
   background-color: #fff;
 }
