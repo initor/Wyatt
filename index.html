@@ -18,10 +18,16 @@
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1">
     <div layout="row" layout-sm="column" ng-repeat="picArr in Ctrlr.pictures" layout-margin layout-fill layout-padding >
         <div class="tile" flex ng-repeat="pic in picArr">
-          <p>Item <span style="font-weight: bold">#{{ pic.index }}</span></p>
-          <p>YoYoYo, last sync: <span style="font-weight: bold; color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span></p>
+          <md-content>
+            <md-card>
+              <h4><span style="color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span></h4>
+              <img src="{{ pic.url }}" class="md-card-image" alt="Washed Out" pagespeed_url_hash="3292878804" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+              <h2>Item <span style="font-weight: bold">#{{ pic.index }}</span></h2>
+              <p>YoYoYo, last sync: <span style="font-weight: bold; color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span></p>
+            </md-card>
+          </md-content>
         </div>
-      </div>
+      </div> 
     </div>
   </div>
 
@@ -40,6 +46,7 @@
 
   <!-- ng-infinite-scroll - v1.2.0 - 2014-12-02 -->
   <script src="JavaScript/ng-infinite-scroll.min.js"></script>
+  <script pagespeed_no_defer src="JavaScript/material-card.js"></script>
 
   <script src="JavaScript/main.js"></script>
 </body>
