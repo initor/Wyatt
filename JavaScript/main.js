@@ -12,7 +12,8 @@
       var tempLoadPics = [];
       for(var i = 0; i<4; i++){
         var item = {};
-        item.index = ctl.pictures.length + 1;
+        item.index = indexOfPics;
+        indexOfPics++;
         item.content = new Date();
         item.url = urlOfDemeImg;
         tempLoadPics.push(item);
@@ -25,12 +26,14 @@
   }]);
 
   var pics = [];
+  var indexOfPics = 0;
   var urlOfDemeImg = 'http://images.apple.com/live/2014-sept-event/images/b920a3040b8d0d31f8b0d938e1566557c6deb479_xlarge.jpg';
 
   var initialLoadPics = [];
   for(var i = 0; i<10; i++){
     var item = {};
-    item.index = i;
+    item.index = indexOfPics;
+    indexOfPics++;
     item.content = new Date();
     item.url = urlOfDemeImg;
     initialLoadPics.push(item);
