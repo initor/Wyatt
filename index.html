@@ -19,7 +19,7 @@
     <div layout="column" layout-gt-md="row" ng-repeat="picArr in Ctrlr.pictures" layout-margin layout-fill layout-padding >
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
-            <span style="color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span> 
+            <span style="color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm a' }}</span> 
           </header>
           <md-content>
             <md-card>
