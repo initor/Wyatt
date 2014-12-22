@@ -23,7 +23,7 @@
   for(var i = 0; i<4; i++){
     var item = {};
     item.index = i;
-    item.content = 'YOYOYO, this is the ' + i + ' item!';
+    item.content = new Date();
     pics.push(item);
   }
 
