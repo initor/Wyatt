@@ -10,7 +10,7 @@
   <div ng-controller="PortraitsCtrlr as Ctrlr">
     <div layout="column" layout-gt-md="row">
       <div infinite-scroll="Ctrlr.loadItems()">
-        <div flex ng-repeat="pic in Ctrlr.pictures">Item #{{ pic.index }}: Last Sync @{{ pic.content | date:'yyyy-MM-dd @ h:mma' }}</div>
+        <div flex ng-repeat="pic in Ctrlr.pictures">Item #{{ pic.index }}: Last Sync @{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</div>
       </div>
     </div>
   </div>
