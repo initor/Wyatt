@@ -2,12 +2,28 @@ html, body {
   background-color: #f2f2f2;
 }
 
+@media (min-width: 640px) {
+	.feed {
+		width: 319px;
+		height: 445px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.feed {
+		width: 447px;
+		height: 480px;
+	}
+}
+
+@media (min-width: 1280px) {
+	.feed {
+		width: 655px;
+		height: 610px;
+	}
+}
+
 .feed {
   border-radius: 2px;
   background-color: #fff;
-}
-
-[flex] {
-  width: 655px;
-  height: 610px;
 }
