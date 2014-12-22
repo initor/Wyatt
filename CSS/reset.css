@@ -1,27 +1,147 @@
-html, body {
-	background-color: #f2f2f2;
-}
+/*{"c":"2014-11-13T06:05:27Z","s":"prod-origin-867f316d","v":"0c1ddf"}*/
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * freight-text-pro:
+ *   - http://typekit.com/eulas/00000000000000000001205a
+ *   - http://typekit.com/eulas/00000000000000000001205c
+ *   - http://typekit.com/eulas/000000000000000000012059
+ *   - http://typekit.com/eulas/00000000000000000001205b
+ * jaf-bernino-sans:
+ *   - http://typekit.com/eulas/00000000000000000001466e
+ *   - http://typekit.com/eulas/000000000000000000014670
+ *   - http://typekit.com/eulas/000000000000000000014674
+ *
+ * (c) 2009-2014 Adobe Systems Incorporated. All Rights Reserved.
+ */
 
-.tile {
-	border-radius: 2px;
-	background-color: #fff;
-}
+ @font-face {
+ 	font-family: "freight-text-pro";
+ 	src: url('Fonts/freight-text-pro_400_italic.ttf');
+ 	font-style: italic;
+ 	font-weight: 400;
+ }
 
-.tile-header, .tile-footer {
-	padding-left: 10px;
-}
+ @font-face {
+ 	font-family: "freight-text-pro";
+ 	src: url('Fonts/freight-text-pro_700_italic.ttf');
+ 	font-style: italic;
+ 	font-weight: 700;
+ }
 
-.tile-header {
-	line-height: 44px;
-}
+ @font-face {
+ 	font-family: "freight-text-pro";
+ 	src: url('Fonts/freight-text-pro_normal_400.ttf');
+ 	font-style: normal;
+ 	font-weight: 400;
+ }
 
-.tile-footer {
-	font-size: 0.875em;
-	line-height: 48px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 48px;
-	z-index: 1;
-}
+ @font-face {
+ 	font-family: "freight-text-pro";
+ 	src: url('Fonts/freight-text-pro_normal_700.ttf');
+ 	font-style: normal;
+ 	font-weight: 700;
+ }
+
+ @font-face {
+ 	font-family: "jaf-bernino-sans";
+ 	src: url('Fonts/jaf-bernino-sans_normal_300.ttf');
+ 	font-style: normal;
+ 	font-weight: 300;
+ }
+
+ @font-face {
+ 	font-family: "jaf-bernino-sans";
+ 	src: url('Fonts/jaf-bernino-sans_normal_400.ttf');
+ 	font-style: normal;
+ 	font-weight: 400;
+ }
+
+ @font-face {
+ 	font-family: "jaf-bernino-sans";
+ 	src: url('Fonts/jaf-bernino-sans_normal_700.ttf');
+ 	font-style: normal;
+ 	font-weight: 700;
+ }
+
+ @font-face {
+ 	font-family: "ff-tisa-web-pro";
+ 	src: url('Fonts/ff-tisa-web-pro_italic_400.ttf');
+ 	font-style: italic;
+ 	font-weight: 400;
+ }
+
+ @font-face {
+ 	font-family: "ff-tisa-web-pro";
+ 	src: url('Fonts/ff-tisa-web-pro_italic_700.ttf');
+ 	font-style: italic;
+ 	font-weight: 700;
+ }
+
+ @font-face {
+ 	font-family: "ff-tisa-web-pro";
+ 	src: url('Fonts/ff-tisa-web-pro_normal_400.ttf');
+ 	font-style: normal;
+ 	font-weight: 400;
+ }
+
+ @font-face {
+ 	font-family: "ff-tisa-web-pro";
+ 	src: url('Fonts/ff-tisa-web-pro_normal_700.ttf');
+ 	font-style: normal;
+ 	font-weight: 700;
+ }
+
+ @font-face {
+ 	font-family: "freight-sans-pro";
+ 	src: url('Fonts/freight-sans-pro_normal_500.ttf');
+ 	font-style: normal;
+ 	font-weight: 500;
+ }
+
+ @font-face {
+ 	font-family: "freight-sans-pro";
+ 	src: url('Fonts/freight-sans-pro_normal_700.ttf');
+ 	font-style: normal;
+ 	font-weight: 700;
+ }
+
+ html, body {
+ 	background-color: #f2f2f2;
+ }
+
+ body {
+ 	color: #333;
+ 	font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+ 	letter-spacing: -0.02em;
+ 	font-weight: 400;
+ 	font-style: normal;
+ 	text-rendering: optimizeLegibility;
+ 	-webkit-font-smoothing: antialiased;
+ 	-moz-osx-font-smoothing: grayscale;
+ 	-moz-font-feature-settings: "liga" on;
+ 	font-size: 18px;
+ 	line-height: 1.4;
+ }
+
+ .tile {
+ 	border-radius: 2px;
+ 	background-color: #fff;
+ }
+
+ .tile-header, .tile-footer {
+ 	padding-left: 10px;
+ }
+
+ .tile-header {
+ 	line-height: 44px;
+ }
+
+ .tile-footer {
+ 	font-size: 1em;
+ 	font-weight: normal;
+ 	font-style: normal;
+ }
