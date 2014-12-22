@@ -9,22 +9,32 @@
     ctl.pictures = pics;
 
     this.loadItems = function(){
+      var tempLoadPics = [];
       for(var i = 0; i<4; i++){
         var item = {};
         item.index = ctl.pictures.length + 1;
         item.content = new Date();
-        ctl.pictures.push(item);
+        tempLoadPics.push(item);
+      }
+
+      while(tempLoadPics.length){
+        ctl.pics.push(tempLoadPics.splice(0,2));
       }
     };
   }]);
 
   var pics = [];
 
-  for(var i = 0; i<4; i++){
+  var initialLoadPics = [];
+  for(var i = 0; i<10; i++){
     var item = {};
     item.index = i;
     item.content = new Date();
-    pics.push(item);
+    initialLoadPics.push(item);
+  }
+
+  while(initialLoadPics.length){
+    pics.push(initialLoadPics.splice(0,2));
   }
 
 })();
