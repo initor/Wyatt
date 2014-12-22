@@ -11,7 +11,7 @@
     this.loadItems = function(){
       for(var i = 0; i<4; i++){
         var item = {};
-        item.index = ctl.pictures.length + i;
+        item.index = ctl.pictures.length + 1;
         item.content = new Date();
         ctl.pictures.push(item);
       }
