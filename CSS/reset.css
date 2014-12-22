@@ -1,4 +1,10 @@
+body {
+  background-color: #f2f2f2;
+}
+
 .feed {
   width: 655px;
   height: 610px;
+  border-radius: 2px;
+  background-color: #fff;
 }
