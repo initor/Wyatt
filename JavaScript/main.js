@@ -6,7 +6,6 @@
 
   app.controller('PortraitsCtrlr', ['$http', function($http){
     var ctl = this;
-    ctl.pictures = pics;
 
     this.loadItems = function(){
       var tempLoadPics = [];
@@ -18,7 +17,7 @@
       }
 
       while(tempLoadPics.length){
-        ctl.pics.push(tempLoadPics.splice(0,2));
+        pics.push(tempLoadPics.splice(0,2));
       }
     };
   }]);
