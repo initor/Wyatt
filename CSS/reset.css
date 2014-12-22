@@ -20,91 +20,91 @@
 
  @font-face {
  	font-family: "freight-text-pro";
- 	src: url('Fonts/freight-text-pro_400_italic.ttf');
+ 	src: url('/Fonts/freight-text-pro_400_italic.ttf');
  	font-style: italic;
  	font-weight: 400;
  }
 
  @font-face {
  	font-family: "freight-text-pro";
- 	src: url('Fonts/freight-text-pro_700_italic.ttf');
+ 	src: url('/Fonts/freight-text-pro_700_italic.ttf');
  	font-style: italic;
  	font-weight: 700;
  }
 
  @font-face {
  	font-family: "freight-text-pro";
- 	src: url('Fonts/freight-text-pro_normal_400.ttf');
+ 	src: url('/Fonts/freight-text-pro_normal_400.ttf');
  	font-style: normal;
  	font-weight: 400;
  }
 
  @font-face {
  	font-family: "freight-text-pro";
- 	src: url('Fonts/freight-text-pro_normal_700.ttf');
+ 	src: url('/Fonts/freight-text-pro_normal_700.ttf');
  	font-style: normal;
  	font-weight: 700;
  }
 
  @font-face {
  	font-family: "jaf-bernino-sans";
- 	src: url('Fonts/jaf-bernino-sans_normal_300.ttf');
+ 	src: url('/Fonts/jaf-bernino-sans_normal_300.ttf');
  	font-style: normal;
  	font-weight: 300;
  }
 
  @font-face {
  	font-family: "jaf-bernino-sans";
- 	src: url('Fonts/jaf-bernino-sans_normal_400.ttf');
+ 	src: url('/Fonts/jaf-bernino-sans_normal_400.ttf');
  	font-style: normal;
  	font-weight: 400;
  }
 
  @font-face {
  	font-family: "jaf-bernino-sans";
- 	src: url('Fonts/jaf-bernino-sans_normal_700.ttf');
+ 	src: url('/Fonts/jaf-bernino-sans_normal_700.ttf');
  	font-style: normal;
  	font-weight: 700;
  }
 
  @font-face {
  	font-family: "ff-tisa-web-pro";
- 	src: url('Fonts/ff-tisa-web-pro_italic_400.ttf');
+ 	src: url('/Fonts/ff-tisa-web-pro_italic_400.ttf');
  	font-style: italic;
  	font-weight: 400;
  }
 
  @font-face {
  	font-family: "ff-tisa-web-pro";
- 	src: url('Fonts/ff-tisa-web-pro_italic_700.ttf');
+ 	src: url('/Fonts/ff-tisa-web-pro_italic_700.ttf');
  	font-style: italic;
  	font-weight: 700;
  }
 
  @font-face {
  	font-family: "ff-tisa-web-pro";
- 	src: url('Fonts/ff-tisa-web-pro_normal_400.ttf');
+ 	src: url('/Fonts/ff-tisa-web-pro_normal_400.ttf');
  	font-style: normal;
  	font-weight: 400;
  }
 
  @font-face {
  	font-family: "ff-tisa-web-pro";
- 	src: url('Fonts/ff-tisa-web-pro_normal_700.ttf');
+ 	src: url('/Fonts/ff-tisa-web-pro_normal_700.ttf');
  	font-style: normal;
  	font-weight: 700;
  }
 
  @font-face {
  	font-family: "freight-sans-pro";
- 	src: url('Fonts/freight-sans-pro_normal_500.ttf');
+ 	src: url('/Fonts/freight-sans-pro_normal_500.ttf');
  	font-style: normal;
  	font-weight: 500;
  }
 
  @font-face {
  	font-family: "freight-sans-pro";
- 	src: url('Fonts/freight-sans-pro_normal_700.ttf');
+ 	src: url('/Fonts/freight-sans-pro_normal_700.ttf');
  	font-style: normal;
  	font-weight: 700;
  }
