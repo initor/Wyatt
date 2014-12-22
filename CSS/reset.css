@@ -138,6 +138,11 @@
  	background-color: #fff;
  }
 
+ .tile md-card {
+ 	padding: 0px;
+ 	margin-top: 0px;
+ }
+
  .tile-header, .tile-footer {
  	padding-left: 10px;
  }
