@@ -19,16 +19,16 @@
     <div layout="column" layout-gt-md="row" ng-repeat="picArr in Ctrlr.pictures" layout-margin>
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
-            <span>{{ pic.content | date:'EEEE, MMM d, y' }}</span> 
+            <span>{{ pic.created | date:'EEEE, MMM d, y' }}</span> 
           </header>
           <md-content>
             <md-card>
-              <img ng-src="{{ pic.url }}" class="md-card-image" alt="Washed Out" style="border-radius: 2px;">
+              <img ng-src="{{ pic.url }}" class="md-card-image" alt="Item #{{ pic.index }}" style="border-radius: 2px;">
             </md-card>
           </md-content>
           <footer class="tile-footer">
             <h3>Item #{{ pic.index }}</h3>
-            <p>YoYoYo, last sync: <span style="color: #1E88E5;">{{ pic.content | date:'EEEE, MMM d, y' }}</span></p>
+            <p>{{ pic.caption }}</p>
           </footer>
           </div>
         </div>

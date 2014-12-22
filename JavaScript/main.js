@@ -14,7 +14,8 @@
         var item = {};
         item.index = indexOfPics;
         indexOfPics++;
-        item.content = new Date();
+        item.created = new Date();
+        item.caption = captions;
         item.url = urlOfDemeImg;
         tempLoadPics.push(item);
       }
@@ -28,14 +29,17 @@
   var pics = [];
   var indexOfPics = 0;
   var urlOfDemeImg = 'http://farm3.staticflickr.com/2807/9317135155_0a078a007e_k.jpg';
+  var captions = '"He does math problems out loud in his sleep."<br>"She collects vintage teacups."';
 
   var initialLoadPics = [];
   for(var i = 0; i<10; i++){
     var item = {};
     item.index = indexOfPics;
     indexOfPics++;
-    item.content = new Date();
+    item.created = new Date();
+    item.caption = captions;
     item.url = urlOfDemeImg;
+
     initialLoadPics.push(item);
   }
 
