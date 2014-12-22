@@ -6,18 +6,19 @@
 
   app.controller('PortraitsCtrlr', ['$http', function($http){
     var ctl = this;
+    ctl.pictures = pics;
 
     this.loadItems = function(){
       var tempLoadPics = [];
       for(var i = 0; i<4; i++){
         var item = {};
-        item.index = pics.length + 1;
+        item.index = ctl.pictures.length + 1;
         item.content = new Date();
         tempLoadPics.push(item);
       }
 
       while(tempLoadPics.length){
-        pics.push(tempLoadPics.splice(0,2));
+        ctl.pictures.push(tempLoadPics.splice(0,2));
       }
     };
   }]);
