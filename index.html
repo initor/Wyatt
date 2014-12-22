@@ -18,7 +18,7 @@
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="2" infinite-scroll-immediate-check="true">
     <div layout="row" layout-sm="column" ng-repeat="picArr in Ctrlr.pictures" layout-margin layout-fill layout-padding >
         <div class="tile" flex ng-repeat="pic in picArr">
-          <header class="title">
+          <header class="tile-header">
             <span style="color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span> 
           </header>
           <md-content>
@@ -26,7 +26,7 @@
               <img src="{{ pic.url }}" class="md-card-image" alt="Washed Out" pagespeed_url_hash="3292878804" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
             </md-card>
           </md-content>
-          <footer class="footer">
+          <footer class="tile-footer">
             <h2>Item <span style="font-weight: bold">#{{ pic.index }}</span></h2>
             <p>YoYoYo, last sync: <span style="font-weight: bold; color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span></p>
           </footer>
