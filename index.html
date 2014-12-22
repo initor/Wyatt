@@ -19,12 +19,12 @@
     <div layout="row" layout-sm="column" ng-repeat="picArr in Ctrlr.pictures" layout-margin layout-fill layout-padding >
         <div class="tile" flex ng-repeat="pic in picArr">
           <md-content>
+            <h4 style="line-height: 44px !important;"><span style="color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span></h4>
             <md-card>
-              <h4 style="line-height: 44px !important;"><span style="color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span></h4>
               <img src="{{ pic.url }}" class="md-card-image" alt="Washed Out" pagespeed_url_hash="3292878804" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-              <h2>Item <span style="font-weight: bold">#{{ pic.index }}</span></h2>
-              <p>YoYoYo, last sync: <span style="font-weight: bold; color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span></p>
             </md-card>
+            <h2>Item <span style="font-weight: bold">#{{ pic.index }}</span></h2>
+            <p>YoYoYo, last sync: <span style="font-weight: bold; color: #1E88E5;">{{ pic.content | date:'yyyy-MM-dd @ h:mm:ssa' }}</span></p>
           </md-content>
         </div>
       </div> 
