@@ -17,7 +17,7 @@
   <div ng-controller="PortraitsCtrlr as Ctrlr">
 
     <!-- Container of photo tiles -->
-    <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="2" infinite-scroll-immediate-check="true">
+    <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
       <div layout="column" layout-gt-md="row" ng-repeat="picArr in Ctrlr.pictures" layout-margin>
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
