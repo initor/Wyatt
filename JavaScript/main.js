@@ -23,7 +23,7 @@
         originalLoads.push(item);
       });
 
-      for(int i = 0; i < 3; i++){
+      for(var i = 0; i < 3; i++){
         ctl.pictures.push(initialLoadPics.splice(0,2));
       }
     }).error(function(data, status, header, config){
@@ -31,7 +31,7 @@
 
     this.loadItems = function(){
       if(originalLoads.length >= 6){
-        for(int i = 0; i < 3; i++){
+        for(var i = 0; i < 3; i++){
           ctl.pictures.push(initialLoadPics.splice(0,2));
         }
       }else{
