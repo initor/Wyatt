@@ -169,3 +169,30 @@
  	margin-bottom: 20px; 
  	margin-top: 10px;
  }
+
+ .md-card-image {
+ 	border-radius: 2px;
+ }
+
+ .avatarCard {
+ 	border-radius: 64px;
+	height: 128px;
+	width: 128px;
+	padding-left: 0px;
+	padding-top: 0px;
+ }
+
+ .avatarCard img {
+ 	border-radius: 512px;
+ 	width: 128px;
+ }
+
+ .md-whiteframe {
+ 	background-color: rgba(0,0,0,0.65);
+	color: #fff;
+	z-index: 999;
+ }
+
+ .md-whiteframe.md-content {
+ 	background-color: transparent;
+ }
