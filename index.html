@@ -15,10 +15,6 @@
 </head>
 <body ng-app="WyattIn">
   <div ng-controller="PortraitsCtrlr as Ctrlr">
-    <!-- Loading linear -->
-    <div layout="column" layout-align="space-around center" layout-margin layout-fill class="pLinear" ng-show="ctl.loadingLinear">
-        <md-progress-linear md-mode="indeterminate" class="md-warn"></md-progress-linear>
-    </div>
 
     <!-- Container of photo tiles -->
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="2" infinite-scroll-immediate-check="true">
@@ -41,8 +37,13 @@
     </div>
     <!-- End of photo tiles -->
 
+    <!-- Loading linear -->
     <div layout="column" layout-align="space-around" layout-margin layout-fill >
       <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+
+    <div layout="column" layout-align="space-around center" layout-margin layout-fill class="pLinear">
+        <md-progress-linear md-mode="indeterminate" class="md-warn"></md-progress-linear>
     </div>
   </div>
 </div>
