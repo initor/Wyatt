@@ -14,7 +14,7 @@
     ctl.loadingLinear = true;
     var originalLoads = [];
 
-    $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=16c28cba59fbe3b8685bc2316a38a1a0&photoset_id=72157649472095227&extras=description%2C+date_taken%2C+owner_name%2C+original_format%2C+geo%2C+tags%2C+machine_tags%2C+views%2C+media%2C+path_alias%2C+url_sq%2C+url_k%2C+url_o&format=json&nojsoncallback=1')
+    $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=16c28cba59fbe3b8685bc2316a38a1a0&photoset_id=72157649472095227+&extras=description%2C+date_taken%2C+url_k%2C+url_o&format=json&nojsoncallback=1')
     .success(function(data, status, header, config){
       angular.forEach(data.photoset.photo, function(item, key){
         item.index = indexOfPics;
