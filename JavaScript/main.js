@@ -2,7 +2,7 @@
 
 (function(){
   // Declare the module of Angular
-  var app = angular.module('WyattIn', ['ngMaterial', 'infinite-scroll']);
+  var app = angular.module('WyattIn', ['ngMaterial', 'ngSanitize', 'infinite-scroll']);
 
   var indexOfPics = 0;
   var urlOfDemeImg = 'http://farm3.staticflickr.com/2807/9317135155_0a078a007e_k.jpg';
