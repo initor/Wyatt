@@ -16,10 +16,13 @@
 <body ng-app="WyattIn">
   <div ng-controller="PortraitsCtrlr as Ctrlr">
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="2" infinite-scroll-immediate-check="true">
-    <div layout="column" layout-gt-md="row" ng-repeat="picArr in Ctrlr.pictures" layout-margin>
+      <div layout="column" layout-align="space-around">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+      </div>
+      <div layout="column" layout-gt-md="row" ng-repeat="picArr in Ctrlr.pictures" layout-margin>
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
-            <span>{{ pic.datetaken | date:'EEEE ' }}</span><span style="color: #d6d6d6;">{{ pic.datetaken | date:' MMM d, y' }}</span>
+            {{ pic.datetaken | date:'EEEE ' }}<span style="color: #d6d6d6;">{{ pic.datetaken | date:' MMM d, y' }}</span>
           </header>
           <md-content>
             <md-card>
@@ -30,29 +33,29 @@
             <h3>{{ pic.title }}</h3>
             <p ng-bind-html="pic.description._content"></p>
           </footer>
-          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- JavaScript code and libraries go here to improve loading performance -->
-  <!-- jQuery library -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- JavaScript code and libraries go here to improve loading performance -->
+<!-- jQuery library -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-  <!-- Angular Material Dependencies -->
-  <script src="//cdn.jsdelivr.net/hammerjs/2.0.4/hammer.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
+<!-- Angular Material Dependencies -->
+<script src="//cdn.jsdelivr.net/hammerjs/2.0.4/hammer.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
 
-  <!-- Angular Material Javascript -->
-  <script src="//ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.js"></script>
+<!-- Angular Material Javascript -->
+<script src="//ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.js"></script>
 
-  <!-- ng-infinite-scroll - v1.2.0 - 2014-12-02 -->
-  <script src="JavaScript/ng-infinite-scroll.min.js"></script>
-  <script pagespeed_no_defer src="JavaScript/material-card-demo.js"></script>
+<!-- ng-infinite-scroll - v1.2.0 - 2014-12-02 -->
+<script src="JavaScript/ng-infinite-scroll.min.js"></script>
+<script pagespeed_no_defer src="JavaScript/material-card-demo.js"></script>
 
-  <script src="JavaScript/main.js"></script>
+<script src="JavaScript/main.js"></script>
 </body>
 </html>
