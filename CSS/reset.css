@@ -188,9 +188,9 @@
  }
 
  md-whiteframe {
- 	background-color: rgba(0,0,0,0.65);
-	color: #fff;
+ 	background-color: #fff;
 	z-index: 999;
+	border-radius: 2px !important;
  }
 
  md-whiteframe md-content {
