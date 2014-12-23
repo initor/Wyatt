@@ -15,7 +15,7 @@
 
     $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=595c6d500b09a6e37151e0d099eee03b&photoset_id=72157649472095227&extras=date_upload%2C+date_taken%2C+owner_name%2C+icon_server%2C+original_format%2C+last_update%2C+geo%2C+tags%2C+machine_tags%2C+url_sq%2C+url_t%2C+url_s%2C+url_m%2C+url_o&format=json&nojsoncallback=1&auth_token=72157649479403870-f6f68d8485975c03&api_sig=6336a189b366d9d7541fd067a02ccbcd')
     .success(function(data, status, header, config){
-      var photos = data.photoset.photo.items;
+      var photos = data.photoset.photo;
       alert(photos.length);
       angular.forEach(photos, function(item, key){
         var urlOfPic = (item.url_o);
