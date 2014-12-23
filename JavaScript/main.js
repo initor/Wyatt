@@ -2,13 +2,13 @@
 
 (function(){
   // Declare the module of Angular
-  var app = angular.module('WyattIn', ['ngMaterial', 'ngSanitize', 'infinite-scroll']);
+  var app = angular.module('WyattIn', ['ngMaterial', 'infinite-scroll']);
 
   var indexOfPics = 0;
   var urlOfDemeImg = 'http://farm3.staticflickr.com/2807/9317135155_0a078a007e_k.jpg';
   var captions = '"He does math problems out loud in his sleep."<br>"She collects vintage teacups."';
 
-  app.controller('PortraitsCtrlr', ['$http', '$parse', function($http, $parse){
+  app.controller('PortraitsCtrlr', ['$http', '$sce', function($http, $sce){
     var ctl = this;
     ctl.pictures = [];
     var originalLoads = [];
@@ -20,6 +20,7 @@
         indexOfPics++;
         item.caption = 'YoYoYo!';
         item.datetaken = new Date(item.datetaken);
+        item.description._content = $sce.trustAsHtml(item.description._content);
         originalLoads.push(item);
       });
 
