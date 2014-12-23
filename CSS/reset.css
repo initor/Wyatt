@@ -196,11 +196,7 @@
  md-whiteframe md-content {
  	background-color: transparent !important;
  }
-
- md-whiteframe md-content p {
- 	text-align: center !important;
- }
-
-  md-whiteframe md-content p span {
+ 
+  md-whiteframe p span {
  	color: #08c !important;
  }
