@@ -29,13 +29,13 @@
     });
 
     this.loadItems = function(){
-      var tempLoadPics = [];
-      for(var i = 0; i<16; i++){
-      }
-
-      while(tempLoadPics.length){
-        ctl.pictures.push(tempLoadPics.splice(0,2));
-      }
+      // var tempLoadPics = [];
+      // for(var i = 0; i<16; i++){
+      // }
+      //
+      // while(tempLoadPics.length){
+      //   ctl.pictures.push(tempLoadPics.splice(0,2));
+      // }
     };
   }]);
 })();
