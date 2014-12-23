@@ -25,15 +25,13 @@
         item.url = urlOfPic;
 
         initialLoadPics.push(item);
-
-        while(initialLoadPics.length){
-          ctl.pictures.push(initialLoadPics.splice(0,2));
-        }
       });
+
+      while(initialLoadPics.length){
+        ctl.pictures.push(initialLoadPics.splice(0,2));
+      }
     }).error(function(data, status, header, config){
-
     });
-
 
     this.loadItems = function(){
       var tempLoadPics = [];
