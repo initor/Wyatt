@@ -200,3 +200,7 @@
  md-whiteframe md-content p {
  	text-align: center !important;
  }
+
+  md-whiteframe md-content p span {
+ 	color: #08c !important;
+ }
