@@ -31,13 +31,6 @@
     this.loadItems = function(){
       var tempLoadPics = [];
       for(var i = 0; i<16; i++){
-        var item = {};
-        item.index = indexOfPics;
-        indexOfPics++;
-        item.created = new Date();
-        item.caption = captions;
-        item.url = urlOfDemeImg;
-        tempLoadPics.push(item);
       }
 
       while(tempLoadPics.length){
