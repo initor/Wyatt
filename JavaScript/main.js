@@ -9,10 +9,11 @@
   var captions = '"He does math problems out loud in his sleep."<br>"She collects vintage teacups."';
 
   app.controller('PortraitsCtrlr', ['$http', '$sce', function($http, $sce){
+    var ctl = this;
 
+    // Initialize loadingLinear show boolean
     ctl.loadingLinear = true;
     
-    var ctl = this;
     ctl.pictures = [];
     ctl.originalLoads = [];
 
@@ -44,7 +45,7 @@
           ctl.pictures.push(ctl.originalLoads.splice(0,2));
         }
       }else{
-        while(originalLoads.length){
+        while(ctl.originalLoads.length){
           ctl.pictures.push(ctl.originalLoads.splice(0,2));
         }
       }
