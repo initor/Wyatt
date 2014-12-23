@@ -17,7 +17,7 @@
   <div ng-controller="PortraitsCtrlr as Ctrlr">
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="2" infinite-scroll-immediate-check="true">
       <div layout="column" layout-align="space-around">
-        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        <md-progress-circular class="md-hue-2" style="margin-bottom: 20px;" md-mode="indeterminate"></md-progress-circular>
       </div>
       <div layout="column" layout-gt-md="row" ng-repeat="picArr in Ctrlr.pictures" layout-margin>
         <div class="tile" flex ng-repeat="pic in picArr">
