@@ -24,7 +24,7 @@
       });
 
       for(var i = 0; i < 3; i++){
-        ctl.pictures.push(initialLoadPics.splice(0,2));
+        ctl.pictures.push(originalLoads.splice(0,2));
       }
     }).error(function(data, status, header, config){
     });
@@ -32,11 +32,11 @@
     this.loadItems = function(){
       if(originalLoads.length >= 6){
         for(var i = 0; i < 3; i++){
-          ctl.pictures.push(initialLoadPics.splice(0,2));
+          ctl.pictures.push(originalLoads.splice(0,2));
         }
       }else{
         while(originalLoads.length){
-          ctl.pictures.push(initialLoadPics.splice(0,2));
+          ctl.pictures.push(originalLoads.splice(0,2));
         }
       }
     };
