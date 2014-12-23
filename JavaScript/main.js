@@ -20,7 +20,6 @@
         indexOfPics++;
         item.caption = 'YoYoYo!';
         item.datetaken = new Date(item.datetaken);
-        item.description._content = $parse('item.description._content');
         originalLoads.push(item);
       });
 
