@@ -16,8 +16,10 @@
 <body ng-app="WyattIn">
   <div ng-controller="PortraitsCtrlr as Ctrlr">
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="2" infinite-scroll-immediate-check="true">
-      <div layout="column" layout-align="space-around">
-        <md-progress-circular class="md-hue-2" style="margin-bottom: 20px; margin-top: 20px;" md-mode="indeterminate"></md-progress-circular>
+      <div ng-controller="AppCtrl" layout="column" layout-margin style="padding:25px;">
+        <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+        <md-progress-linear class="md-warn" md-mode="indeterminate"></md-progress-linear>
+        <md-progress-linear class="md-accent" md-mode="indeterminate"></md-progress-linear>
       </div>
       <div layout="column" layout-gt-md="row" ng-repeat="picArr in Ctrlr.pictures" layout-margin>
         <div class="tile" flex ng-repeat="pic in picArr">
