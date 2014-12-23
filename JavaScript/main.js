@@ -13,7 +13,7 @@
 
     // Initialize loadingLinear show boolean
     ctl.loadingLinear = true;
-    
+
     ctl.pictures = [];
     ctl.originalLoads = [];
 
@@ -26,7 +26,12 @@
         item.description._content = $sce.trustAsHtml(item.description._content);
         ctl.originalLoads.push(item);
       });
- 
+      
+      ctl.originalLoads.sort(function(a,b){
+        // Turn your strings into dates, and then subtract them
+        // to get a value that is either negative, positive, or zero.
+        return new Date(b.datetaken) - new Date(a.datetaken);
+      });
       ctl.loadingLinear = false;
 
       for(var i = 0; i < 3; i++){
