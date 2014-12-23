@@ -17,6 +17,7 @@
     .success(function(data, status, header, config){
       angular.forEach(data.photoset.photo.items, function(item, key){
         var urlOfPic = (item.url_o);
+        alert(urlOfPic);
         var i = {};
         item.index = indexOfPics;
         indexOfPics++;
