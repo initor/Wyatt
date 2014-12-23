@@ -18,8 +18,7 @@
       angular.forEach(data.photoset.photo, function(item, key){
         item.index = indexOfPics;
         indexOfPics++;
-        item.caption = 'YoYoYo!';
-        item.datetaken = new Date(item.datetaken);
+        item.datetaken = new Date(item.datetaken.split(" ")[0]);
         item.description._content = $sce.trustAsHtml(item.description._content);
         originalLoads.push(item);
       });
