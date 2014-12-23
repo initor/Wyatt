@@ -19,6 +19,7 @@
         item.index = indexOfPics;
         indexOfPics++;
         item.caption = 'YoYoYo!';
+        item.datetaken = new Date(item.datetaken);
         initialLoadPics.push(item);
       });
 
