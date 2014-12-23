@@ -194,5 +194,9 @@
  }
 
  md-whiteframe md-content {
- 	background-color: transparent;
+ 	background-color: transparent !important;
+ }
+
+ md-whiteframe md-content p {
+ 	text-align: center !important;
  }
