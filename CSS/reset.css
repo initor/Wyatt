@@ -187,12 +187,12 @@
  	width: 128px;
  }
 
- .md-whiteframe {
+ md-whiteframe {
  	background-color: rgba(0,0,0,0.65);
 	color: #fff;
 	z-index: 999;
  }
 
- .md-whiteframe.md-content {
+ md-whiteframe.md-content {
  	background-color: transparent;
  }
