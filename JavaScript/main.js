@@ -20,22 +20,6 @@
     }
 
     function getGeoInfo(pId, wId){
-      var geoApiUrl = generateGeoApiUrl(pId, wId);
-      $http.get(geoApiUrl).success(function(data, status, header, config){
-        return data.place.locality._content;
-      }).error(function(data, status, header, config){
-        return status;
-      });
-    }
-
-    function setGeoInfo(array){
-      angular.forEach(array, function(pair, key){
-        angular.forEach(pair, function(item, key){
-          if(item.place_id && item.woeid){
-            item.geoInfo = getGeoInfo(item.place_id, item.woeid);
-          }
-        });
-      });
     }
 
     $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=eb6e83fd2b255ab9adfef687f4c18e63&photoset_id=72157649472095227+&extras=geo%2C+description%2C+date_taken%2C+url_h%2C+url_o&format=json&nojsoncallback=1')
@@ -46,10 +30,17 @@
         item.datetaken = new Date(item.datetaken.split(" ")[0]);
         item.description._content = $sce.trustAsHtml(item.description._content);
 
-        if(item.place_id && item.woeid){
-          console.warn("place_id: %O", item.place_id);
-          item.geoInfo = getGeoInfo(item.place_id, item.woeid);
-        }
+        // if(item.place_id && item.woeid){
+        //   item.geoInfo = getGeoInfo(item.place_id, item.woeid);
+        // }
+        //
+        // // Get Geo Info
+        // var geoApiUrl = generateGeoApiUrl(pId, wId);
+        // $http.get(geoApiUrl).success(function(data, status, header, config){
+        //   return data.place.locality._content;
+        // }).error(function(data, status, header, config){
+        //   return status;
+        // });
 
         ctl.originalLoads.push(item);
       });
