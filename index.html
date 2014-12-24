@@ -18,7 +18,7 @@
 
     <!-- Container of photo tiles -->
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
-      <div layout="row" layout-md="column" layout-sm="column" layout-align="start start" ng-repeat="picArr in Ctrlr.pictures" layout-margin layout-fill>
+      <div layout="column" layout-gt-md="row" ng-repeat="picArr in Ctrlr.pictures" layout-margin layout-fill>
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
             {{ pic.datetaken | date:'EEEE ' }}<span style="color: #d6d6d6;">{{ pic.datetaken | date:' MMM d, y' }}</span>
@@ -36,7 +36,7 @@
       </div>
 
       <!-- Loading linear -->
-      <div layout="column" layout-fill layout-align="center center" class="pLinear" ng-show="Ctrlr.originalLoads.length">
+      <div layout="column" layout-fill class="pLinear" ng-show="Ctrlr.originalLoads.length">
         <md-progress-linear md-mode="indeterminate"></md-progress-linear>
       </div>
 
