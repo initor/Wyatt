@@ -45,6 +45,11 @@
         indexOfPics++;
         item.datetaken = new Date(item.datetaken.split(" ")[0]);
         item.description._content = $sce.trustAsHtml(item.description._content);
+
+        if(item.place_id && item.woeid){
+          item.geoInfo = getGeoInfo(item.place_id, item.woeid);
+        }
+
         ctl.originalLoads.push(item);
       });
 
@@ -57,7 +62,6 @@
 
       for(var i = 0; i < 3; i++){
         ctl.pictures.push(ctl.originalLoads.splice(0,2));
-        setGeoInfo(ctl.pictures);
       }
     }).error(function(data, status, header, config){
     });
@@ -66,22 +70,16 @@
 
       // Show loading linear
       ctl.loadingLinear = true;
-      var tempCollection = [];
 
       if(ctl.originalLoads.length >= 6){
         for(var i = 0; i < 3; i++){
-          tempCollection.push(ctl.originalLoads.splice(0,2));
+          ctl.pictures.push(ctl.originalLoads.splice(0,2));
         }
       }else{
         while(ctl.originalLoads.length){
-          tempCollection.push(ctl.originalLoads.splice(0,2));
+          ctl.pictures.push(ctl.originalLoads.splice(0,2));
         }
       }
-
-      setGeoInfo(tempCollection);
-      angular.forEach(tempCollection, function(pair, key){
-        ctl.pictures.push(pair);
-      });
 
       // Hide loading linear
       ctl.loadingLinear = false;
