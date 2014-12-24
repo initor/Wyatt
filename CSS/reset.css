@@ -171,6 +171,7 @@
  	background-color: #fff;
 	z-index: 999;
 	border-radius: 2px !important;
+  padding-top: 16px !important;
  }
 
  md-whiteframe md-content {
