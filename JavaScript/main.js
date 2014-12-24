@@ -22,8 +22,7 @@
     function getGeoInfo(pId, wId){
       var geoApiUrl = generateGeoApiUrl(pId, wId);
       $http.get(geoApiUrl).success(function(data, status, header, config){
-        alert(data.locality._content);
-        return data.locality._content;
+        return data.place.locality._content;
       }).error(function(data, status, header, config){
         return status;
       });
