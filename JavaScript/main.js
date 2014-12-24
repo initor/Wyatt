@@ -46,7 +46,7 @@
         item.datetaken = new Date(item.datetaken.split(" ")[0]);
         item.description._content = $sce.trustAsHtml(item.description._content);
 
-        if(item.place_id.length && item.woeid.length){
+        if(item.place_id && item.woeid){
           console.warn("place_id: %O", item.place_id);
           item.geoInfo = getGeoInfo(item.place_id, item.woeid);
         }
