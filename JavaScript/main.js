@@ -1,5 +1,3 @@
-// Main .js of Wyatt.in
-
 (function(){
   // Declare the module of Angular
   var app = angular.module('WyattIn', ['ngMaterial', 'infinite-scroll']);
@@ -26,7 +24,7 @@
         item.description._content = $sce.trustAsHtml(item.description._content);
         ctl.originalLoads.push(item);
       });
-      
+
       ctl.originalLoads.sort(function(a,b){
         // Turn your strings into dates, and then subtract them
         // to get a value that is either negative, positive, or zero.
@@ -36,7 +34,7 @@
 
       for(var i = 0; i < 3; i++){
         ctl.pictures.push(ctl.originalLoads.splice(0,2));
-      } 
+      }
     }).error(function(data, status, header, config){
     });
 

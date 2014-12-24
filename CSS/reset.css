@@ -1,24 +1,4 @@
-/*{"c":"2014-11-13T06:05:27Z","s":"prod-origin-867f316d","v":"0c1ddf"}*/
-/*
- * The Typekit service used to deliver this font or fonts for use on websites
- * is provided by Adobe and is subject to these Terms of Use
- * http://www.adobe.com/products/eulas/tou_typekit. For font license
- * information, see the list below.
- *
- * freight-text-pro:
- *   - http://typekit.com/eulas/00000000000000000001205a
- *   - http://typekit.com/eulas/00000000000000000001205c
- *   - http://typekit.com/eulas/000000000000000000012059
- *   - http://typekit.com/eulas/00000000000000000001205b
- * jaf-bernino-sans:
- *   - http://typekit.com/eulas/00000000000000000001466e
- *   - http://typekit.com/eulas/000000000000000000014670
- *   - http://typekit.com/eulas/000000000000000000014674
- *
- * (c) 2009-2014 Adobe Systems Incorporated. All Rights Reserved.
- */
-
- @font-face {
+@font-face {
  	font-family: "freight-text-pro";
  	src: url('/Fonts/freight-text-pro_400_italic.ttf');
  	font-style: italic;
@@ -166,7 +146,7 @@
  }
 
  .pLinear {
- 	margin-bottom: 20px; 
+ 	margin-bottom: 20px;
  	margin-top: 10px;
  }
 
@@ -196,7 +176,7 @@
  md-whiteframe md-content {
  	background-color: transparent !important;
  }
- 
+
   md-whiteframe p span {
  	color: #08c !important;
  }
