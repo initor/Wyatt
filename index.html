@@ -23,11 +23,9 @@
           <header class="tile-header">
             {{ pic.datetaken | date:'EEEE ' }}<span style="color: #d6d6d6;">{{ pic.datetaken | date:' MMM d, y' }}</span>
           </header>
-          <md-content>
-            <md-card>
-              <img ng-src="{{ pic.url_h }}" class="md-card-image" alt="{{ pic.title }}">
-            </md-card>
-          </md-content>
+          <md-card>
+            <img ng-src="{{ pic.url_h }}" class="md-card-image" alt="{{ pic.title }}">
+          </md-card>
           <footer class="tile-footer">
             <h3>{{ pic.title }}</h3>
             <p ng-bind-html="pic.description._content"></p>
