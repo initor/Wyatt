@@ -20,7 +20,7 @@
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
 
       <!-- Pair in a row -->
-      <div layout="column" layout-gt-md="row" flex ng-repeat="picArr in Ctrlr.pictures" layout-margin>
+      <div layout="column" layout-gt-md="row" layout-fill flex ng-repeat="picArr in Ctrlr.pictures" layout-margin>
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
             {{ pic.datetaken | date:'EEEE ' }}<span style="color: #d6d6d6;">{{ pic.datetaken | date:' MMM d, y' }}</span>
@@ -36,12 +36,12 @@
       </div>
 
       <!-- Loading linear -->
-      <div layout="column" layout-fill flex="100" class="pLinear" ng-show="Ctrlr.originalLoads.length">
+      <div layout="column" layout-fill class="pLinear" ng-show="Ctrlr.originalLoads.length">
         <md-progress-linear md-mode="indeterminate"></md-progress-linear>
       </div>
 
       <!-- End point of page -->
-      <div layout="column" flex="100" layout-margin layout-padding ng-hide="Ctrlr.originalLoads.length">
+      <div layout="column" layout-fill layout-margin ng-hide="Ctrlr.originalLoads.length">
           <md-whiteframe flex class="md-whiteframe-z1" layout="column" layout-align="center center">
             <md-card class="avatarCard">
               <img src="Images/selfie.jpg" class="md-card-image">
