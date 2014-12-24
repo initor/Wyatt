@@ -15,8 +15,6 @@
     ctl.pictures = [];
     ctl.originalLoads = [];
 
-    var urlOfGeoApi = 'https://api.flickr.com/services/rest/?method=flickr.places.getInfo&api_key=eb6e83fd2b255ab9adfef687f4c18e63&place_id=ligPyJBUV7ObriEBmg&woe_id=55986868&format=json&nojsoncallback=1';
-
     function generateGeoApiUrl(pId, wId){
       return 'https://api.flickr.com/services/rest/?method=flickr.places.getInfo&api_key=eb6e83fd2b255ab9adfef687f4c18e63&place_id=' + pId + '&woe_id=' + wId + '&format=json&nojsoncallback=1';
     }
@@ -24,6 +22,7 @@
     function getGeoInfo(pId, wId){
       var geoApiUrl = generateGeoApiUrl(pId, wId);
       $http.get(geoApiUrl).success(function(data, status, header, config){
+        alert(data.locality._content);
         return data.locality._content;
       }).error(function(data, status, header, config){
         return status;
