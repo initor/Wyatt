@@ -19,7 +19,7 @@
     <!-- Container of photo tiles -->
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
       <div layout="column" layout-gt-md="row" flex ng-repeat="picArr in Ctrlr.pictures" layout-margin layout-fill>
-        <div class="tile" flex ng-repeat="pic in picArr">
+        <div class="tile" flex="50" ng-repeat="pic in picArr">
           <header class="tile-header">
             {{ pic.datetaken | date:'EEEE ' }}<span style="color: #d6d6d6;">{{ pic.datetaken | date:' MMM d, y' }}</span>
           </header>
