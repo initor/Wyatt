@@ -32,7 +32,7 @@
       });
       ctl.loadingLinear = false;
 
-      for(var i = 0; i < 3; i++){
+      for(var i = 0; i < 6; i++){
         ctl.pictures.push(ctl.originalLoads.splice(0,2));
       }
     }).error(function(data, status, header, config){
@@ -44,7 +44,7 @@
       ctl.loadingLinear = true;
 
       if(ctl.originalLoads.length >= 6){
-        for(var i = 0; i < 3; i++){
+        for(var i = 0; i < 6; i++){
           ctl.pictures.push(ctl.originalLoads.splice(0,2));
         }
       }else{
