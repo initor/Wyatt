@@ -47,7 +47,7 @@
         item.description._content = $sce.trustAsHtml(item.description._content);
 
         if(item.place_id && item.woeid){
-          alert(item.place_id);
+          console.warn("place_id: %O", item.place_id);
           item.geoInfo = getGeoInfo(item.place_id, item.woeid);
         }
 
