@@ -31,10 +31,12 @@
     }
 
     function setGeoInfo(array){
-      angular.forEach(array, function(item, key){
-        if(item.place_id && item.woeid){
-          item.geoInfo = getGeoInfo(item.place_id, item.woeid);
-        }
+      angular.forEach(array, function(pair, key){
+        angular.forEach(pair, function(item, key){
+          if(item.place_id && item.woeid){
+            item.geoInfo = getGeoInfo(item.place_id, item.woeid);
+          }
+        });
       });
     }
 
