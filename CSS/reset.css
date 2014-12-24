@@ -151,7 +151,7 @@
  }
 
  .md-card-image {
- 	border-radius: 2px;
+ 	border-radius: 2px !important;
  }
 
  .avatarCard {
