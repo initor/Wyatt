@@ -25,7 +25,7 @@
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
             {{ pic.datetaken | date:'EEEE ' }}<span style="color: #d6d6d6;">{{ pic.datetaken | date:' MMM d, y' }}</span>
-            <p style="color: #d6d6d6;" ng-show="pic.geoInfo">
+            <p style="color: #d6d6d6;" ng-show="pic.geoInfo.length">
               <i class="ion-location" data-pack="default" data-tags="gps, navigation, pin"></i>&nbsp;{{ pic.geoInfo }}
             </p>
           </header>
