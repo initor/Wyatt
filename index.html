@@ -20,8 +20,8 @@
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
 
       <!-- Pair in a row -->
-      <div layout="column" layout-gt-md="row" layout-fill flex ng-repeat="picArr in Ctrlr.pictures" layout-margin>
-        <div class="tile" flex ng-repeat="pic in picArr">
+      <div layout="column" layout-gt-md="row" layout-fill layout-margin flex ng-repeat="picArr in Ctrlr.pictures">
+        <div class="tile" layout-fill flex ng-repeat="pic in picArr">
           <header class="tile-header">
             {{ pic.datetaken | date:'EEEE ' }}<span style="color: #d6d6d6;">{{ pic.datetaken | date:' MMM d, y' }}</span>
           </header>
