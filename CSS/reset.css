@@ -132,6 +132,10 @@
  }
 
  .tile-header p {
+   font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+   letter-spacing: 0.01rem;
+   font-weight: 400;
+   font-style: italic;
    margin-top: -14px;
    margin-bottom: 10px;
    font-size: .85em;
