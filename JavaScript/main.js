@@ -22,7 +22,7 @@
     function getGeoInfo(pId, wId){
     }
 
-    $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=eb6e83fd2b255ab9adfef687f4c18e63&photoset_id=72157649472095227+&extras=geo%2C+description%2C+date_taken%2C+url_o%2C+url_h%2C+url_k&format=json&nojsoncallback=1')
+    $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=eb6e83fd2b255ab9adfef687f4c18e63&photoset_id=72157649472095227&extras=url_o%2C+url_k%2C+url_h%2C+geo%2C+description%2C+date_taken&format=json&nojsoncallback=1&auth_token=72157649912589211-177ed8b1e0fa4ebd&api_sig=a6a0ec4b1586a50b7a0cac502b5287e7')
     .success(function(data, status, header, config){
       angular.forEach(data.photoset.photo, function(item, key){
         item.index = indexOfPics;
