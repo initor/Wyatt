@@ -131,7 +131,7 @@
  	line-height: 44px;
  }
 
- .tile-header p, .tile-header.meta {
+ .tile-header p, .tile-header .meta {
    font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
    letter-spacing: -0.01em !important;
    font-style: normal;
