@@ -19,7 +19,24 @@
       return 'https://api.flickr.com/services/rest/?method=flickr.places.getInfo&api_key=eb6e83fd2b255ab9adfef687f4c18e63&place_id=' + pId + '&woe_id=' + wId + '&format=json&nojsoncallback=1';
     }
 
-    function getGeoInfo(pId, wId){
+    function getGeoInfo(pId, wId, item){
+      // Get Geo Info
+      var geoApiUrl = generateGeoApiUrl(pId, wId);
+      $http.get(geoApiUrl).success(function(data, status, header, config){
+        item.geoInfo = data.place.locality._content;
+      }).error(function(data, status, header, config){
+        return status;
+      });
+    }
+
+    function setGeoInfo(arrayOfPair){
+      angular.forEach(arrayOfPair, function(pair, key){
+        angular.forEach(pair, function(item, key){
+          if(item.place_id && item.woeid){
+            getGeoInfo(item.place_id, item.woeid, item);
+          }
+        });
+      })
     }
 
     $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=eb6e83fd2b255ab9adfef687f4c18e63&photoset_id=72157649472095227&extras=url_c%2C+url_k%2C+url_h%2C+geo%2C+description%2C+date_taken&format=json&nojsoncallback=1')
@@ -30,6 +47,7 @@
         item.datetaken = new Date(item.datetaken.split(" ")[0]);
         item.description._content = $sce.trustAsHtml(item.description._content);
 
+        // Handle picture resolution differences
         var url_dpl = '';
         if(item.url_k){
           url_dpl = item.url_k;
@@ -38,19 +56,7 @@
         }else{
           url_dpl = item.url_c;
         }
-
         item.url_dpl = url_dpl;
-        // if(item.place_id && item.woeid){
-        //   item.geoInfo = getGeoInfo(item.place_id, item.woeid);
-        // }
-        //
-        // // Get Geo Info
-        // var geoApiUrl = generateGeoApiUrl(pId, wId);
-        // $http.get(geoApiUrl).success(function(data, status, header, config){
-        //   return data.place.locality._content;
-        // }).error(function(data, status, header, config){
-        //   return status;
-        // });
 
         ctl.originalLoads.push(item);
       });
@@ -65,6 +71,8 @@
       for(var i = 0; i < 3; i++){
         ctl.pictures.push(ctl.originalLoads.splice(0,2));
       }
+
+      setGeoInfo(ctl.pictures);
     }).error(function(data, status, header, config){
     });
 
