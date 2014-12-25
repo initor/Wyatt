@@ -131,6 +131,13 @@
  	line-height: 44px;
  }
 
+ .tile-header p {
+   margin-top: -14px;
+   margin-bottom: 10px;
+   font-size: .85em;
+   color: #d6d6d6;
+ }
+
  .tile-footer {
  	font-size: 1em;
  	font-weight: normal;
