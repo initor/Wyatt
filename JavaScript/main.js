@@ -82,16 +82,22 @@
 
       // Show loading linear
       ctl.loadingLinear = true;
+      var preGeoPictures = [];
 
       if(ctl.originalLoads.length >= 6){
         for(var i = 0; i < 3; i++){
-          ctl.pictures.push(ctl.originalLoads.splice(0,2));
+          preGeoPictures.push(ctl.originalLoads.splice(0,2));
         }
       }else{
         while(ctl.originalLoads.length){
-          ctl.pictures.push(ctl.originalLoads.splice(0,2));
+          preGeoPictures.push(ctl.originalLoads.splice(0,2));
         }
       }
+
+      setGeoInfo(preGeoPictures);
+      angular.forEach(preGeoPictures, function(pair, key){
+        ctl.pictures.push(pair);
+      });
 
       // Hide loading linear
       ctl.loadingLinear = false;
