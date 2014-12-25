@@ -146,7 +146,7 @@
    color: #d6d6d6;
  }
 
- .tile-header p .geo {
+ .tile-header p.geo {
    font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
    letter-spacing: 0.01rem;
    font-weight: 400;
