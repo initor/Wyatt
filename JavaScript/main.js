@@ -22,7 +22,7 @@
     function getGeoInfo(pId, wId){
     }
 
-    $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=eb6e83fd2b255ab9adfef687f4c18e63&photoset_id=72157649472095227+&extras=geo%2C+description%2C+date_taken%2C+url_c%2C+url_o&format=json&nojsoncallback=1')
+    $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=eb6e83fd2b255ab9adfef687f4c18e63&photoset_id=72157649472095227+&extras=geo%2C+description%2C+date_taken%2C+url_o%2C+url_h%2C+url_k&format=json&nojsoncallback=1')
     .success(function(data, status, header, config){
       angular.forEach(data.photoset.photo, function(item, key){
         item.index = indexOfPics;
@@ -30,6 +30,16 @@
         item.datetaken = new Date(item.datetaken.split(" ")[0]);
         item.description._content = $sce.trustAsHtml(item.description._content);
 
+        var url_dpl = '';
+        if(item.url_k){
+          url_dpl = item.url_k;
+        }else if(item.url_h){
+          url_dpl = item.url_h;
+        }else{
+          url_dpl = item.url_o;
+        }
+
+        item.url_dpl = url_dpl;
         // if(item.place_id && item.woeid){
         //   item.geoInfo = getGeoInfo(item.place_id, item.woeid);
         // }
