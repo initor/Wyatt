@@ -24,8 +24,13 @@
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
             {{ pic.datetaken | date:'EEEE ' }}<span style="color: #d6d6d6;">{{ pic.datetaken | date:' MMM d, y' }}</span>
+
+            <!-- Meta data of picutre -->
             <p ng-show="pic.geoInfo.length">
-              <i class="ion-location" data-pack="default" data-tags="gps, navigation, pin"></i>&nbsp;{{ pic.geoInfo }}
+              <i class="ion-location"></i>&nbsp;{{ pic.geoInfo }}
+            </p>
+            <p ng-show="pic.camera.length">
+              <i class="ion-ios-camera-outline"></i>&nbsp;{{ pic.camera }}
             </p>
           </header>
           <md-card>
