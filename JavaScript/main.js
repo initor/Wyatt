@@ -29,14 +29,12 @@
       });
     }
 
-    function setGeoInfo(arrayOfPair){
-      angular.forEach(arrayOfPair, function(pair, key){
-        angular.forEach(pair, function(item, key){
+    function setGeoInfo(arrayOfPics){
+        angular.forEach(arrayOfPics, function(item, key){
           if(item.place_id && item.woeid){
             getGeoInfo(item.place_id, item.woeid, item);
           }
         });
-      })
     }
 
     $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=eb6e83fd2b255ab9adfef687f4c18e63&photoset_id=72157649472095227&extras=url_c%2C+url_k%2C+url_z%2C+url_h%2C+geo%2C+description%2C+date_taken&format=json&nojsoncallback=1')
@@ -63,6 +61,7 @@
         ctl.originalLoads.push(item);
       });
 
+      setGeoInfo(ctl.originalLoads);
       ctl.originalLoads.sort(function(a,b){
         // Turn your strings into dates, and then subtract them
         // to get a value that is either negative, positive, or zero.
@@ -73,8 +72,6 @@
       for(var i = 0; i < 3; i++){
         ctl.pictures.push(ctl.originalLoads.splice(0,2));
       }
-
-      setGeoInfo(ctl.pictures);
     }).error(function(data, status, header, config){
     });
 
@@ -82,22 +79,16 @@
 
       // Show loading linear
       ctl.loadingLinear = true;
-      var preGeoPictures = [];
 
       if(ctl.originalLoads.length >= 6){
         for(var i = 0; i < 3; i++){
-          preGeoPictures.push(ctl.originalLoads.splice(0,2));
+          ctl.pictures.push(ctl.originalLoads.splice(0,2));
         }
       }else{
         while(ctl.originalLoads.length){
-          preGeoPictures.push(ctl.originalLoads.splice(0,2));
+          ctl.pictures.push(ctl.originalLoads.splice(0,2));
         }
       }
-
-      setGeoInfo(preGeoPictures);
-      angular.forEach(preGeoPictures, function(pair, key){
-        ctl.pictures.push(pair);
-      });
 
       // Hide loading linear
       ctl.loadingLinear = false;
