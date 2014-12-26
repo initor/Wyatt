@@ -58,6 +58,16 @@
         }
         item.url_dpl = url_dpl;
 
+        // Handle camera meta data
+        if(item.camera){
+          if(item.camera.indexOf('Canon')){
+            item.camera.dslr = true;
+          }
+          if(item.camera.indexOf('Apple')){
+            item.camera.ios = true;
+          }
+        }
+
         ctl.originalLoads.push(item);
       });
 
