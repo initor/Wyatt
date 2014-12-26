@@ -204,9 +204,7 @@
    width: 100%;
  }
 
- // Fixed Width Icons
- // -------------------------
- .@{fa-css-prefix}-fw {
-   width: (18em / 14);
+ .fa-fw {
+   width: 1.28571429em;
    text-align: center;
  }
