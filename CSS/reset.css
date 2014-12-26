@@ -203,3 +203,10 @@
    /* min-height: 100%; */
    width: 100%;
  }
+
+ // Fixed Width Icons
+ // -------------------------
+ .@{fa-css-prefix}-fw {
+   width: (18em / 14);
+   text-align: center;
+ }

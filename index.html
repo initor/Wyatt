@@ -22,13 +22,13 @@
       <div layout="column" layout-gt-md="row" layout-fill-width-only-Wyatt layout-margin flex ng-repeat="picArr in Ctrlr.pictures">
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
-            <i class="fa fa-camera fa-fw" ng-show="pic.camera.indexOf('Apple')"></i>
-            <i class="fa fa-apple fa-fw" ng-show="pic.camera.indexOf('Canon EOS')"></i>
+            <i class="ion-ios-camera-outline fa-fw" ng-show="pic.camera.indexOf('Apple')"></i>
+            <i class="ion-social-apple-outline fa-fw" ng-show="pic.camera.indexOf('Canon EOS')"></i>
             <span style="color: #d6d6d6;">
               &nbsp;{{ pic.datetaken | date:'EEEE, MMM d, y' }}
             </span>
             <p ng-show="pic.geoInfo.length">
-              <i class="fa fa-map-marker fa-fw"></i>
+              <i class="ion-ios-location-outline fa-fw"></i>
               <span>
                 &nbsp;{{ pic.geoInfo }}
               </span>
