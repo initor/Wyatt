@@ -27,9 +27,8 @@
             <span style="color: #d6d6d6;">
               &nbsp;{{ pic.datetaken | date:'EEEE, MMM d, y' }}
             </span>
-            </span>
-            <p class="geo" ng-show="pic.geoInfo.length">
-              <i class="ion-ios-location-outline"></i>&nbsp;{{ pic.geoInfo }}
+            <p ng-show="pic.geoInfo.length">
+              <i class="ion-ios-location-outline"></i><span>&nbsp;{{ pic.geoInfo }}</span>
             </p>
           </header>
           <md-card>

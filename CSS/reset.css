@@ -131,26 +131,20 @@
  	line-height: 44px;
  }
 
- .tile-header p, .tile-header .meta {
+ .tile-header p{
    font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-   letter-spacing: -0.01em !important;
    font-style: normal;
-   font-size: .75em;
    text-transform: uppercase;
    color: rgba(0,0,0,0.3);
    white-space: nowrap;
    margin-top: -14px;
    margin-bottom: 10px;
    color: #d6d6d6;
+   letter-spacing: -0.02em;
  }
 
- .tile-header p.geo {
-   font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-   letter-spacing: -0.02em;
-   font-style: normal;
-   text-transform: uppercase;
-   letter-spacing: .2em;
-   white-space: nowrap;
+ .tile-header p span {
+   font-size: .75em;
  }
 
  .tile-footer {
