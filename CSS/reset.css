@@ -145,11 +145,13 @@
  }
 
  .tile-header p.geo {
-   font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
-   letter-spacing: 0.01rem;
-   font-weight: 400;
-   font-style: italic;
-   text-transform: none;
+   font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+   letter-spacing: -0.02em;
+   font-weight: 700;
+   font-style: normal;
+   text-transform: uppercase;
+   letter-spacing: .2em;
+   white-space: nowrap;
  }
 
  .tile-footer {
