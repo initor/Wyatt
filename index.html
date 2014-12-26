@@ -9,7 +9,7 @@
   <link rel="shortcut" href="Images/logo.ico">
   <link rel="icon" href="Images/logo.png">
   <link rel="stylesheet" href="CSS/angular-material.min.css">
-  <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="CSS/reset.css">
 </head>
 <body ng-app="WyattIn">
@@ -22,13 +22,13 @@
       <div layout="column" layout-gt-md="row" layout-fill-width-only-Wyatt layout-margin flex ng-repeat="picArr in Ctrlr.pictures">
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
-            <i class="ion-ios-camera-outline" ng-show="pic.camera.indexOf('Apple')"></i>
-            <i class="ion-social-apple-outline" ng-show="pic.camera.indexOf('Canon EOS')"></i>
+            <i class="fa fa-camera fa-fw" ng-show="pic.camera.indexOf('Apple')"></i>
+            <i class="fa fa-apple fa-fw" ng-show="pic.camera.indexOf('Canon EOS')"></i>
             <span style="color: #d6d6d6;">
               &nbsp;{{ pic.datetaken | date:'EEEE, MMM d, y' }}
             </span>
             <p ng-show="pic.geoInfo.length">
-              <i class="ion-ios-location-outline"></i>
+              <i class="fa fa-map-marker fa-fw"></i>
               <span>
                 &nbsp;{{ pic.geoInfo }}
               </span>
