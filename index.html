@@ -28,7 +28,10 @@
               &nbsp;{{ pic.datetaken | date:'EEEE, MMM d, y' }}
             </span>
             <p ng-show="pic.geoInfo.length">
-              <i class="ion-ios-location-outline"></i><span>&nbsp;{{ pic.geoInfo }}</span>
+              <i class="ion-ios-location-outline"></i>
+              <span>
+                &nbsp;{{ pic.geoInfo }}
+              </span>
             </p>
           </header>
           <md-card>
