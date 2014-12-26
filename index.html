@@ -25,8 +25,8 @@
             <i class="ion-ios-camera-outline" ng-show="pic.camera.indexOf('Apple')"></i>
             <i class="ion-social-apple-outline" ng-show="pic.camera.indexOf('Canon EOS')"></i>
             <span style="color: #d6d6d6;">
-              &nbsp;&nbsp;{{ pic.datetaken | date:'EEEE MMM d, y' }}
-            </span> 
+              &nbsp;{{ pic.datetaken | date:'EEEE, MMM d, y' }}
+            </span>
             </span>
             <p class="geo" ng-show="pic.geoInfo.length">
               <i class="ion-ios-location-outline"></i>&nbsp;{{ pic.geoInfo }}
