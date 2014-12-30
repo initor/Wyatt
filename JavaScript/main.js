@@ -109,7 +109,7 @@
         if(item.place_id && item.woeid){
           getGeoInfo(item.place_id, item.woeid, item);
         }
-        getExifInfo(item.id, item.secret, item);
+        //getExifInfo(item.id, item.secret, item);
       });
     }
   }]);
