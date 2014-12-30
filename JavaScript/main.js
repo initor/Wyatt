@@ -85,6 +85,7 @@
     function getGeoInfo(pId, wId, item){
       var geoApiUrl = generateGeoApiUrl(pId, wId);
       $http.get(geoApiUrl).success(function(data, status, header, config){
+        item.geoInfo = '';
         item.geoInfo = data.place.locality._content;
       }).error(function(data, status, header, config){
         return status;
@@ -95,6 +96,7 @@
     function getExifInfo(pId, scrt, item){
       var exifApiUrl = generateExifApiUlr(pId, scrt);
       $http.get().success(function(data, status, header, config){
+        item.exifInfo = [];
         item.exifInfo = data.photo.exif;
       }).error(function(data, status, header, config){
         return status;
