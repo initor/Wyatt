@@ -99,6 +99,7 @@
         var make = '';
         var model = '';
         var lensModel = '';
+
         angular.forEach(data.photo.exif, function(item, key){
           if( item.tag === 'Make' ){
             make = item.raw._content;
@@ -110,10 +111,11 @@
             lensModel = item.raw._content;
           }
         });
-        if(model.indexOf(make) > 0){
-          item.exifInfo.Model = model;
-        }else{
+
+        if(model.indexOf(make) === -1){
           item.exifInfo.Model = make + ' ' + model;
+        }else{
+          item.exifInfo.Model = model;
         }
         item.exifInfo.LensModel = lensModel;
       }).error(function(data, status, header, config){
