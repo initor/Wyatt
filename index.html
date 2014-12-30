@@ -27,6 +27,10 @@
               <i class="fa fa-map-marker fa-fw"></i>
               &nbsp;<span>{{ pic.geoInfo }}</span>
             </p>
+            <p ng-show="pic.exifInfo.length">
+              <i class="fa fa-map-marker fa-fw"></i>
+              &nbsp;<span>{{ pic.exifInfo[36].raw._content }}</span>
+            </p>
           </header>
           <md-card>
             <img ng-src="{{ pic.url_dpl }}" class="md-card-image" alt="{{ pic.title }}">
