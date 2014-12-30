@@ -95,13 +95,23 @@
     function getExifInfo(pId, scrt, item){
       var exifApiUrl = generateExifApiUlr(pId, scrt);
       $http.get(exifApiUrl).success(function(data, status, header, config){
+        var make = '';
+        var model = '';
         var lensModel = '';
         angular.forEach(data.photo.exif, function(item, key){
-          if( item.tag == 'LensModel' ){
+          if( item.tag === 'Make' ){
+            make = item.raw._content;
+          }
+          if( item.tag === 'Model' ){
+            model = item.raw._content;
+          }
+          if( item.tag === 'LensModel' ){
             lensModel = item.raw._content;
           }
         });
-        item.exifInfo = lensModel;
+        item.exifInfo.Make = make;
+        item.exifInfo.Model = model;
+        item.exifInfo.LensModel = lensModel;
       }).error(function(data, status, header, config){
         return status;
       });
