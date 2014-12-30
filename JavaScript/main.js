@@ -95,7 +95,13 @@
     function getExifInfo(pId, scrt, item){
       var exifApiUrl = generateExifApiUlr(pId, scrt);
       $http.get(exifApiUrl).success(function(data, status, header, config){
-        item.exifInfo = data.photo.exif;
+        var lensModel = '';
+        angular.forEach(data.photo.exif, function(item, key){
+          if( item.tag == 'LensModel' ){
+            lensModel = item.raw._content;
+          }
+        });
+        item.exifInfo = lensModel;
       }).error(function(data, status, header, config){
         return status;
       });
