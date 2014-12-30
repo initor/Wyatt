@@ -110,7 +110,7 @@
             lensModel = item.raw._content;
           }
         });
-        if(model.indexOf(make)){
+        if(model.indexOf(make) > 0){
           item.exifInfo.Model = model;
         }else{
           item.exifInfo.Model = make + ' ' + model;
