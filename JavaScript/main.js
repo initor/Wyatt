@@ -95,7 +95,7 @@
     // Get Exif Info
     function getExifInfo(pId, scrt, item){
       var exifApiUrl = generateExifApiUlr(pId, scrt);
-      $http.get().success(function(data, status, header, config){
+      $http.get(exifApiUrl).success(function(data, status, header, config){
         item.exifInfo = [];
         item.exifInfo = data.photo.exif;
       }).error(function(data, status, header, config){
@@ -109,7 +109,7 @@
         if(item.place_id && item.woeid){
           getGeoInfo(item.place_id, item.woeid, item);
         }
-        //getExifInfo(item.id, item.secret, item);
+        getExifInfo(item.id, item.secret, item);
       });
     }
   }]);
