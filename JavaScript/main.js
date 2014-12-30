@@ -110,8 +110,11 @@
             lensModel = item.raw._content;
           }
         });
-        item.exifInfo.Make = make;
-        item.exifInfo.Model = model;
+        if(model.indexOf(make)){
+          item.exifInfo.Model = model;
+        }else{
+          item.exifInfo.Model = make + ' ' + model;
+        }
         item.exifInfo.LensModel = lensModel;
       }).error(function(data, status, header, config){
         return status;
