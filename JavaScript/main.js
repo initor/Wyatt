@@ -76,6 +76,10 @@
       return 'https://api.flickr.com/services/rest/?method=flickr.places.getInfo&api_key=eb6e83fd2b255ab9adfef687f4c18e63&place_id=' + pId + '&woe_id=' + wId + '&format=json&nojsoncallback=1';
     }
 
+    // Concatenate Exif Ajax Url
+    function generateExifApiUlr(pId, scrt){
+      return 'https://api.flickr.com/services/rest/?method=flickr.photos.getExif&api_key=eb6e83fd2b255ab9adfef687f4c18e63&photo_id=' + pId + '&secret=' + scrt + '&format=json&nojsoncallback=1';
+    }
 
     // Get Geo Info
     function getGeoInfo(pId, wId, item){
@@ -87,12 +91,23 @@
       });
     }
 
+    // Get Exif Info
+    function getExifInfo(pId, scrt, item){
+      var exifApiUrl = generateExifApiUlr(pId, scrt);
+      $http.get().success(function(data, status, header, config){
+        item.exifInfo = data.photo.exif;
+      }).error(function(data, status, header, config){
+        return status;
+      });
+    }
+
     // Handle array of pairs of pics
     function setMetaInfo(arrayOfPics){
       angular.forEach(arrayOfPics, function(item, key){
         if(item.place_id && item.woeid){
           getGeoInfo(item.place_id, item.woeid, item);
         }
+        getExifInfo(item.id, item.secret, item);
       });
     }
   }]);
