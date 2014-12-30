@@ -14,8 +14,6 @@
 </head>
 <body ng-app="WyattIn">
   <div ng-controller="PortraitsCtrlr as Ctrlr">
-
-    <!-- Container of photo tiles -->
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
 
       <!-- Pair in a row -->
@@ -47,34 +45,33 @@
 
       <!-- End point of page -->
       <div layout="column" layout-fill layout-margin ng-hide="Ctrlr.originalLoads.length">
-          <md-whiteframe flex class="md-whiteframe-z1" layout="column" layout-align="center center">
-            <md-card class="avatarCard">
-              <img src="Images/selfie.jpg" class="md-card-image">
-            </md-card>
-            <p>Born on <span>Dec 28, 2011</span></p>
-          </md-whiteframe>
+        <md-whiteframe flex class="md-whiteframe-z1" layout="column" layout-align="center center">
+          <md-card class="avatarCard">
+            <img src="Images/selfie.jpg" class="md-card-image">
+          </md-card>
+          <p>Born on <span>Dec 28, 2011</span></p>
+        </md-whiteframe>
       </div>
+
     </div>
-    <!-- End of photo tiles -->
   </div>
-</div>
 
-<!-- JavaScript code and libraries go here to improve loading performance -->
-<!-- jQuery library -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- JavaScript code and libraries go here to improve loading performance -->
+  <!-- jQuery library -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-<!-- Angular Material Dependencies -->
-<script src="//cdn.jsdelivr.net/hammerjs/2.0.4/hammer.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
+  <!-- Angular Material Dependencies -->
+  <script src="//cdn.jsdelivr.net/hammerjs/2.0.4/hammer.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
 
-<!-- Angular Material Javascript -->
-<script src="JavaScript/angular-material.min.js"></script>
+  <!-- Angular Material Javascript -->
+  <script src="JavaScript/angular-material.min.js"></script>
 
-<!-- ng-infinite-scroll - v1.2.0 - 2014-12-02 -->
-<script src="JavaScript/ng-infinite-scroll.min.js"></script>
+  <!-- ng-infinite-scroll - v1.2.0 - 2014-12-02 -->
+  <script src="JavaScript/ng-infinite-scroll.min.js"></script>
 
-<script src="JavaScript/main.js"></script>
+  <script src="JavaScript/main.js"></script>
 </body>
 </html>
