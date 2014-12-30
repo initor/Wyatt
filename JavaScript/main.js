@@ -95,6 +95,7 @@
     function getExifInfo(pId, scrt, item){
       var exifApiUrl = generateExifApiUlr(pId, scrt);
       $http.get(exifApiUrl).success(function(data, status, header, config){
+        item.exifInfo = {};
         var make = '';
         var model = '';
         var lensModel = '';
