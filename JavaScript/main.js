@@ -41,7 +41,7 @@
         ctl.originalLoads.push(item);
       });
 
-      setGeoInfo(ctl.originalLoads);
+      setMetaInfo(ctl.originalLoads);
       ctl.originalLoads.sort(function(a,b){
         // Turn your strings into dates, and then subtract them
         // to get a value that is either negative, positive, or zero.
@@ -88,7 +88,7 @@
     }
 
     // Handle array of pairs of pics
-    function setGeoInfo(arrayOfPics){
+    function setMetaInfo(arrayOfPics){
       angular.forEach(arrayOfPics, function(item, key){
         if(item.place_id && item.woeid){
           getGeoInfo(item.place_id, item.woeid, item);
