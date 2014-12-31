@@ -22,8 +22,10 @@
           <header class="tile-header">
             <!-- <i class="fa fa-camera fa-fw" ng-show="pic.camera.indexOf('Apple')"></i>
             <i class="fa fa-apple fa-fw" ng-show="pic.camera.indexOf('Canon EOS')"></i> -->
-            <i class="fa fa-calendar-o fa-fw"></i>
-            <span style="color: #d6d6d6;">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</span>
+            <p>
+              <i class="fa fa-calendar-o fa-fw"></i>
+              <span style="color: #d6d6d6;">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</span>
+            </p>
             <p ng-show="pic.geoInfo.length">
               <i class="fa fa-map-marker fa-fw"></i>
               <span>{{ pic.geoInfo }}</span>
