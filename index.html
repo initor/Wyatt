@@ -20,13 +20,8 @@
       <div layout="column" layout-gt-md="row" layout-fill-width-only-Wyatt layout-margin flex ng-repeat="picArr in Ctrlr.pictures">
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
-            <md-button class="" aria-label="Insert Drive">
-              <i class="fa fa-camera fa-fw" ng-show="pic.camera.indexOf('Apple')"></i>
-              <i class="fa fa-apple fa-fw" ng-show="pic.camera.indexOf('Canon EOS')"></i>
-              <md-tooltip>
-                Insert Drive
-              </md-tooltip>
-            </md-button>
+            <i class="fa fa-camera fa-fw" ng-show="pic.camera.indexOf('Apple')"></i>
+            <i class="fa fa-apple fa-fw" ng-show="pic.camera.indexOf('Canon EOS')"></i>
             &nbsp;<span style="color: #d6d6d6;">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</span>
             <p ng-show="pic.geoInfo.length">
               <i class="fa fa-map-marker fa-fw"></i>
