@@ -24,12 +24,12 @@
               <i class="fa fa-calendar-o fa-fw"></i>
               <span style="color: #d6d6d6;">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</span>
             </p>
+            <p ng-hide="pic.geoInfo.length" geoInfo>
+              <i class="fa fa-spinner fa-spin fa-fw"></i>
+            </p>
             <p ng-show="pic.geoInfo.length" geoInfo>
               <i class="fa fa-map-marker fa-fw"></i>
               <span>{{ pic.geoInfo }}</span>
-            </p>
-            <p ng-hide="pic.geoInfo.length" geoInfo>
-              <i class="fa fa-spinner fa-spin"></i>
             </p>
             <p ng-show="true">
               <i class="fa fa-camera fa-fw" ng-show="pic.camera.indexOf('Apple')"></i>
