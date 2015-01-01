@@ -25,6 +25,7 @@
               <span style="color: #d6d6d6;">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</span>
             </p>
             <p ng-show="pic.geoInfo.length" geoInfo>
+              <i class="fa fa-spinner fa-spin" ng-hide="pic.geoInfo.length > 0"></i>
               <i class="fa fa-map-marker fa-fw"></i>
               <span>{{ pic.geoInfo }}</span>
             </p>
