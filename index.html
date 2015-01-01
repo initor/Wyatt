@@ -24,18 +24,18 @@
               <i class="fa fa-calendar-o fa-fw"></i>
               <span style="color: #d6d6d6;">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</span>
             </p>
-            <p ng-show="pic.exifInfo.LensModel.length" exifInfo>
+            <p ng-show="pic.exifInfo.LensModel.length" metaInfo>
               <i class="fa fa-camera fa-fw" ng-show="pic.camera.indexOf('Apple')"></i>
               <i class="fa fa-apple fa-fw" ng-show="pic.camera.indexOf('Canon EOS')"></i>
               <span style="text-transform: none;">{{ pic.exifInfo.Model }}</span>&nbsp;
               <i class="fa fa-picture-o fa-fw"></i>&nbsp;
               <span style="text-transform: none;">{{ pic.exifInfo.LensModel }}</span>
             </p>
-            <p ng-show="pic.geoInfo.length">
+            <p ng-show="pic.geoInfo.length" metaInfo>
               <i class="fa fa-map-marker fa-fw"></i>
               <span>{{ pic.geoInfo }}</span>
             </p>
-            <p ng-hide="pic.geoInfo.length" >
+            <p ng-hide="pic.geoInfo.length" metaInfo>
               <i class="fa fa-spinner fa-spin fa-fw"></i>
             </p>
           </header>

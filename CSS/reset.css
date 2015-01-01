@@ -141,9 +141,8 @@
    letter-spacing: -0.02em;
  }
 
-[exifInfo] {
+[metaInfo] {
    margin-top: -20px;
-   margin-bottom: -20px;
  }
 
  .tile-header p span {
