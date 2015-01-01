@@ -141,6 +141,11 @@
    letter-spacing: -0.02em;
  }
 
+ .tile-header p [geoInfo] {
+   margin-top: -16px;
+   margin-bottom: -16px;
+ }
+
  .tile-header p span {
    font-size: .75em;
  }
