@@ -21,7 +21,7 @@
         <div class="tile" flex ng-repeat="pic in picArr">
           <header class="tile-header">
             <p>
-              <i class="fa fa-calendar-o fa-fw"></i>
+              <i class="fa fa-calendar-o fa-fw"></i>&nbsp;
               <span style="color: #d6d6d6;">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</span>
             </p>
             <p ng-show="pic.exifInfo.LensModel.length" metaInfo>
