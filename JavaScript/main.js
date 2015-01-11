@@ -33,7 +33,7 @@
           if(item.camera.indexOf('Canon')){
             item.camera.dslr = true;
           }
-          if(item.camera.indexOf('Canon')){
+          if(item.camera.indexOf('Apple')){
             item.camera.ios = true;
           }
         }
