@@ -33,10 +33,10 @@
         item.ios = false;
 
         if(item.camera){
-          if(item.camera.indexOf('Canon')){
+          if(item.camera.indexOf('Canon') > -1){
             item.dslr = true;
           }
-          if(item.camera.indexOf('Apple')){
+          if(item.camera.indexOf('Apple') > -1){
             item.ios = true;
           }
         }
