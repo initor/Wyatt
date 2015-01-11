@@ -25,7 +25,7 @@
               <span style="color: #d6d6d6;">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</span>
             </p>
             <p ng-show="pic.exifInfo.LensModel.length" metaInfo>
-              <i class="fa fa-camera fa-fw" ng-if="pic.camera.indexOf('Apple')"></i>
+              <i class="fa fa-camera fa-fw" ng-if="pic.camera.indexOf('Apple iPhone')"></i>
               <i class="fa fa-apple fa-fw" ng-if="pic.camera.indexOf('Canon EOS')"></i>
               <span style="text-transform: none;">{{ pic.exifInfo.Model }}</span>&nbsp;
               <i class="fa fa-picture-o fa-fw"></i>&nbsp;
