@@ -29,12 +29,15 @@
         item.url_dpl = url_dpl;
 
         // Handle camera meta data
+        item.dslr = false;
+        item.ios = false;
+
         if(item.camera){
           if(item.camera.indexOf('Canon')){
-            item.camera.dslr = true;
+            item.dslr = true;
           }
           if(item.camera.indexOf('Apple')){
-            item.camera.ios = true;
+            item.ios = true;
           }
         }
 
