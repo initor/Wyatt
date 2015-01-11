@@ -27,7 +27,7 @@
             <p ng-show="pic.exifInfo.LensModel.length" metaInfo>
               <i class="fa fa-camera fa-fw" ng-if="pic.dslr"></i>
               <i class="fa fa-apple fa-fw" ng-if="pic.ios"></i>
-              <span style="text-transform: none;">{{ pic.exifInfo.Model }}</span>&nbsp;
+              <span style="text-transform: none;" ng-if="pic.exifInfo.Model">{{ pic.exifInfo.Model }}&nbsp;</span>
               <i class="fa fa-picture-o fa-fw"></i>&nbsp;
               <span style="text-transform: none;">{{ pic.exifInfo.LensModel }}</span>
             </p>
