@@ -90,6 +90,8 @@
       var geoApiUrl = generateGeoApiUrl(pId, wId);
       $http.get(geoApiUrl).success(function(data, status, header, config){
         item.geoInfo = data.place.locality._content;
+        item.geoInfo.check = true;
+
       }).error(function(data, status, header, config){
         return status;
       });
@@ -114,19 +116,17 @@
           if( item.tag === 'LensModel' ){
             lensModel = item.raw._content;
           }
-        }); 
+        });
 
-        if(model.length < 1){
-          item.exifInfo.none = true;
+        if(model.indexOf(make) === -1){
+          item.exifInfo.Model = make + ' ' + model;
         }else{
-          if(model.indexOf(make) === -1){
-            item.exifInfo.Model = make + ' ' + model;
-          }else{
-            item.exifInfo.Model = model;
-          }
+          item.exifInfo.Model = model;
         }
 
         item.exifInfo.LensModel = lensModel;
+
+        item.exifInfo.check = true;
       }).error(function(data, status, header, config){
         return status;
       });
