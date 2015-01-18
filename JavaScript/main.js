@@ -45,6 +45,7 @@
       });
 
       setMetaInfo(ctl.originalLoads);
+
       ctl.originalLoads.sort(function(a,b){
         // Turn your strings into dates, and then subtract them
         // to get a value that is either negative, positive, or zero.
@@ -113,13 +114,18 @@
           if( item.tag === 'LensModel' ){
             lensModel = item.raw._content;
           }
-        });
+        }); 
 
-        if(model.indexOf(make) === -1){
-          item.exifInfo.Model = make + ' ' + model;
+        if(model.length < 1){
+          item.exifInfo.none = true;
         }else{
-          item.exifInfo.Model = model;
+          if(model.indexOf(make) === -1){
+            item.exifInfo.Model = make + ' ' + model;
+          }else{
+            item.exifInfo.Model = model;
+          }
         }
+
         item.exifInfo.LensModel = lensModel;
       }).error(function(data, status, header, config){
         return status;
