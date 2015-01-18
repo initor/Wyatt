@@ -35,7 +35,7 @@
               <i class="fa fa-map-marker fa-fw"></i>&nbsp;
               <span>{{ pic.geoInfo }}</span>
             </p>
-            <p ng-hide="pic.exifInfo.check && item.geoInfo.check" metaInfo>
+            <p ng-hide="pic.exifInfo.finishFetching && pic.geoInfo.finishFetching" metaInfo>
               <i class="fa fa-spinner fa-spin fa-fw"></i>
             </p>
           </header>
