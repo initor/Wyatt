@@ -90,7 +90,7 @@
       var geoApiUrl = generateGeoApiUrl(pId, wId);
       $http.get(geoApiUrl).success(function(data, status, header, config){
         item.geoInfo = data.place.locality._content;
-        item.geoInfo.finishFetching = 'true';
+        item.geoInfo.finishFetching = true;
 
       }).error(function(data, status, header, config){
         return status;
@@ -126,7 +126,7 @@
 
         item.exifInfo.LensModel = lensModel;
 
-        item.exifInfo.finishFetching = 'true';
+        item.exifInfo.finishFetching = true;
       }).error(function(data, status, header, config){
         return status;
       });
