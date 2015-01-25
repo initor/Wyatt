@@ -708,7 +708,7 @@ function launchParticlesJS(tag_id, params){
                 line_linked: {
                   enable_auto: true,
                   distance: 100,
-                  color: '#fff',
+                  color: '#000',
                   opacity: 1,
                   width: 1,
                   condensed_mode: {
