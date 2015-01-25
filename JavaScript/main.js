@@ -152,7 +152,7 @@
 /* config dom id (optional) + config particles params */
 particlesJS('crazyParticlesJS', {
   particles: {
-    color: '#000',
+    color: '#fff',
     shape: 'circle', // "circle", "edge" or "triangle"
     opacity: 1,
     size: 4,
