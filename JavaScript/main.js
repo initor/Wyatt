@@ -150,7 +150,7 @@
 /* @params: set the params [object, optional, default values : check particles.js] */
 
 /* config dom id (optional) + config particles params */
-particlesJS('particles-js', {
+particlesJS('crazyParticlesJS', {
   particles: {
     color: '#fff',
     shape: 'circle', // "circle", "edge" or "triangle"
