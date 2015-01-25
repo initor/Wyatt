@@ -175,7 +175,7 @@ particlesJS('crazyParticlesJS', {
     }
   },
   interactivity: {
-    enable: false,
+    enable: true,
     mouse: {
       distance: 250
     },
