@@ -19,7 +19,7 @@
       <!-- Pair in a row -->
       <div layout="column" layout-gt-md="row" layout-fill-width-only-Wyatt layout-margin flex ng-repeat="picArr in Ctrlr.pictures">
         <div class="tile" flex ng-repeat="pic in picArr">
-          <div layout="row" layout-sm="column" layout-align="space-around" ng-hide="pic.loaded">
+          <div layout="row" layout-sm="column" layout-align="center center" ng-hide="pic.loaded">
               <md-progress-circular class="md-warn" md-mode="indeterminate"></md-progress-circular>
           </div>
           <div ng-show="pic.loaded">
@@ -50,7 +50,7 @@
               <h3>{{ pic.title }}</h3>
               <p ng-bind-html="pic.description._content"></p>
             </footer>
-          </div> 
+          </div>
         </div>
       </div>
 
