@@ -1,6 +1,37 @@
 (function(){
   // Declare the module of Angular
   var app = angular.module('WyattIn', ['ngMaterial', 'infinite-scroll']);
+
+  // Directive of displaying image only when it has been fully loaded
+  app.directive("loadedSrc", function() {
+    return {
+      link: function(scope, element, attrs) {
+        var img, loadImage;
+        img = null;
+
+        loadImage = function() {
+
+          element[0].src = "pathToSpinner";
+
+          img = new Image();
+          img.src = attrs.mySrc;
+
+          img.onload = function() {
+            element[0].src = attrs.mySrc;
+          };
+        };
+
+        scope.$watch((function() {
+          return attrs.mySrc;
+        }), function(newVal, oldVal) {
+          if (oldVal !== newVal) {
+            loadImage();
+          }
+        });
+      }
+    };
+  });
+
   app.controller('PortraitsCtrlr', ['$http', '$sce', function($http, $sce){
     var ctl = this;
 
