@@ -11,7 +11,7 @@
 
         loadImage = function() {
 
-          element[0].src = "pathToSpinner";
+          element[0].src = "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c99.126.621.621/s50x50/298409_10151182041543258_1534395837_n.jpg?oh=94c253b2aaa13e7c7ddf2ef223669e2a&oe=554D4842&__gda__=1435634145_7f3ce47f1fec63f28662212dbba452e4";
 
           img = new Image();
           img.src = attrs.mySrc;
