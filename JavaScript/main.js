@@ -2,6 +2,18 @@
   // Declare the module of Angular
   var app = angular.module('WyattIn', ['ngMaterial', 'infinite-scroll']);
 
+  // Display images only when fully loaded
+  app.directive('waitforload', function() {
+      return {
+          restrict: 'A',
+          link: function(scope, element, attrs) {
+              element.bind('load', function() {
+                  scope.$apply(attrs.show);
+              });
+          }
+      };
+  });
+
   app.controller('PortraitsCtrlr', ['$http', '$sce', function($http, $sce){
     var ctl = this;
 
@@ -42,6 +54,7 @@
           }
         }
 
+        item.loaded = false;
         ctl.originalLoads.push(item);
       });
 
@@ -75,6 +88,10 @@
 
       ctl.loadingLinear = false;
     };
+
+    ctl.show = function(pic){
+      pic.loaded = true;
+    }
 
     // Concatenate Geo Ajax Url
     function generateGeoApiUrl(pId, wId){

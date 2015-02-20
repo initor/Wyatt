@@ -40,7 +40,8 @@
             </p>
           </header>
           <md-card>
-            <img ng-src="{{ pic.url_dpl }}" class="md-card-image" alt="{{ pic.title }}">
+            <img ng-src="{{ pic.url_dpl }}" class="md-card-image" alt="{{ pic.title }}" waitforload ng-show="pic.loaded" show="Ctrlr.show(pic)">
+            <md-progress-circular class="md-warn" md-mode="indeterminate" ng-hide="pic.loaded"></md-progress-circular>
           </md-card>
           <footer class="tile-footer">
             <h3>{{ pic.title }}</h3>
