@@ -3,7 +3,7 @@
   var app = angular.module('WyattIn', ['ngMaterial', 'infinite-scroll']);
 
   // Directive of displaying image only when it has been fully loaded
-  app.directive("loadedSrc", function() {
+  app.directive("mySrc", function() {
     return {
       link: function(scope, element, attrs) {
         var img, loadImage;
