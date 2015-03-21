@@ -23,10 +23,7 @@
               <md-progress-circular class="md-warn" md-mode="indeterminate"></md-progress-circular>
           </div>
           <div ng-show="pic.loaded">
-            <header class="tile-header">
-              <br/>
-            </header>
-            <md-card>
+            <md-card class="w_card">
               <img ng-src="{{ pic.url_dpl }}" class="md-card-image" alt="{{ pic.title }}" waitforload show="Ctrlr.show(pic)">
             </md-card>
             <footer class="tile-footer">

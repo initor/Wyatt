@@ -185,6 +185,10 @@
  	width: 128px;
  }
 
+.w_card {
+  margin-top: 10px;
+}
+
  md-whiteframe {
  	background-color: #fff;
 	z-index: 999;
