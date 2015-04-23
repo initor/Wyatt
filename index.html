@@ -25,31 +25,33 @@
           <div ng-show="pic.loaded">
             <md-card class="w_card">
               <img ng-src="{{ pic.url_dpl }}" class="md-card-image" alt="{{ pic.title }}" waitforload show="Ctrlr.show(pic)">
+              <md-card-content>
+                <footer class="tile-footer">
+                  <h3>{{ pic.title }}</h3>
+                  <p ng-bind-html="pic.description._content"></p>
+                </footer>
+                <header class="tile-header">
+                  <p>
+                    <i class="fa fa-calendar-o fa-fw"></i>&nbsp;
+                    <span style="color: #d6d6d6;">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</span>
+                  </p>
+                  <p ng-show="pic.exifInfo.LensModel.length" metaInfo>
+                    <i class="fa fa-camera fa-fw" ng-if="pic.dslr"></i>
+                    <i class="fa fa-apple fa-fw" ng-if="pic.ios"></i>
+                    <span style="text-transform: none;" ng-if="pic.exifInfo.Model">&nbsp;{{ pic.exifInfo.Model }}&nbsp;</span>
+                    <i class="fa fa-picture-o fa-fw"></i>&nbsp;
+                    <span style="text-transform: none;">{{ pic.exifInfo.LensModel }}</span>
+                  </p>
+                  <p ng-show="pic.geoInfo.length" metaInfo>
+                    <i class="fa fa-map-marker fa-fw"></i>&nbsp;
+                    <span>{{ pic.geoInfo }}</span>
+                  </p>
+                  <p ng-hide="pic.exifInfo.finishFetching" metaInfo>
+                    <i class="fa fa-spinner fa-spin fa-fw"></i>
+                  </p>
+                </header>
+              </md-card-content>
             </md-card>
-            <footer class="tile-footer">
-              <h3>{{ pic.title }}</h3>
-              <p ng-bind-html="pic.description._content"></p>
-            </footer>
-            <header class="tile-header">
-              <p>
-                <i class="fa fa-calendar-o fa-fw"></i>&nbsp;
-                <span style="color: #d6d6d6;">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</span>
-              </p>
-              <p ng-show="pic.exifInfo.LensModel.length" metaInfo>
-                <i class="fa fa-camera fa-fw" ng-if="pic.dslr"></i>
-                <i class="fa fa-apple fa-fw" ng-if="pic.ios"></i>
-                <span style="text-transform: none;" ng-if="pic.exifInfo.Model">&nbsp;{{ pic.exifInfo.Model }}&nbsp;</span>
-                <i class="fa fa-picture-o fa-fw"></i>&nbsp;
-                <span style="text-transform: none;">{{ pic.exifInfo.LensModel }}</span>
-              </p>
-              <p ng-show="pic.geoInfo.length" metaInfo>
-                <i class="fa fa-map-marker fa-fw"></i>&nbsp;
-                <span>{{ pic.geoInfo }}</span>
-              </p>
-              <p ng-hide="pic.exifInfo.finishFetching" metaInfo>
-                <i class="fa fa-spinner fa-spin fa-fw"></i>
-              </p>
-            </header>
           </div>
         </div>
       </div>
