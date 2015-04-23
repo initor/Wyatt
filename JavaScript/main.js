@@ -159,8 +159,8 @@
         getExifInfo(item.id, item.secret, item);
 
         item.meta = [];
-        
-        if(item.geoInfo.length){
+
+        if(!angular.isUndefined(item.geoInfo)){
           item.meta.push(item.datetaken, item.geoInfo, item.exifInfo.Model, item.exifInfo.LensModel);
         }else {
           item.meta.push(item.datetaken, item.exifInfo.Model, item.exifInfo.LensModel);
