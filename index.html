@@ -26,7 +26,9 @@
             <md-card class="w_card">
               <img ng-src="{{ pic.url_dpl }}" class="md-card-image" alt="{{ pic.title }}" waitforload show="Ctrlr.show(pic)">
             </md-card>
-                <md-chips ng-model="pic.meta"></md-chips>
+            <md-content class="md-padding" layout="column">
+                <md-chips ng-model="pic.meta" readonly="true"></md-chips>
+            </md-content>
           </div>
         </div>
       </div>
