@@ -169,8 +169,7 @@ body {
 }
 
 .md-card-image {
-  border-top-left-radius: 2px !important;
-  border-top-right-radius: 2px !important;
+  border-radius: 2px !important;
 }
 
 .avatarCard {
