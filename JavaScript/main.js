@@ -25,11 +25,7 @@
     $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=eb6e83fd2b255ab9adfef687f4c18e63&photoset_id=72157649472095227&extras=url_c%2C+camera%2C+url_k%2C+url_z%2C+url_h%2C+geo%2C+description%2C+date_taken&format=json&nojsoncallback=1')
     .success(function(data, status, header, config){
       angular.forEach(data.photoset.photo, function(item, key){
-
-        item.meta = [];
-
         item.datetaken = new Date(item.datetaken.split(" ")[0]);
-        item.meta.push(item.datetaken);
 
         // Handle picture resolution differences
         var url_dpl = '';
@@ -112,7 +108,7 @@
       $http.get(geoApiUrl).success(function(data, status, header, config){
         item.geoInfo = data.place.locality._content;
         item.geoInfo.finishFetching = true;
-        item.meta.push(item.geoInfo);
+
       }).error(function(data, status, header, config){
         return status;
       });
@@ -148,8 +144,6 @@
 
         item.exifInfo.LensModel = lensModel;
 
-        item.meta.push(item.exifInfo.Model, lensModel);
-
         item.exifInfo.finishFetching = true;
       }).error(function(data, status, header, config){
         return status;
@@ -163,6 +157,10 @@
           getGeoInfo(item.place_id, item.woeid, item);
         }
         getExifInfo(item.id, item.secret, item);
+
+        item.meta = [];
+        item.meta.push(item.datetaken, item.geoInfo, item.exifInfo.Model, item.exifInfo.LensModel);
+
       });
     }
   }]);
