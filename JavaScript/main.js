@@ -26,11 +26,7 @@
     .success(function(data, status, header, config){
       angular.forEach(data.photoset.photo, function(item, key){
 
-        // Array 'meta' is used for angular material chips
-        item.meta = [];
-
         item.datetaken = new Date(item.datetaken.split(" ")[0]);
-        item.meta.push(item.datetaken);
 
         // Handle picture resolution differences
         var url_dpl = '';
@@ -112,7 +108,6 @@
       var geoApiUrl = generateGeoApiUrl(pId, wId);
       $http.get(geoApiUrl).success(function(data, status, header, config){
         item.geoInfo = data.place.locality._content;
-        item.meta.push(item.geoInfo);
         item.geoInfo.finishFetching = true;
 
       }).error(function(data, status, header, config){
@@ -149,8 +144,6 @@
         }
 
         item.exifInfo.LensModel = lensModel;
-
-        item.meta.push(item.exifInfo.Model, item.exifInfo.LensModel);
 
         item.exifInfo.finishFetching = true;
       }).error(function(data, status, header, config){
