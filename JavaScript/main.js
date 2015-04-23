@@ -26,7 +26,6 @@
     .success(function(data, status, header, config){
       angular.forEach(data.photoset.photo, function(item, key){
         item.datetaken = new Date(item.datetaken.split(" ")[0]);
-        item.description._content = $sce.trustAsHtml(item.description._content);
 
         // Handle picture resolution differences
         var url_dpl = '';
@@ -121,6 +120,7 @@
       $http.get(exifApiUrl).success(function(data, status, header, config){
         item.exifInfo = {};
         item.meta = [];
+
         var make = '';
         var model = '';
         var lensModel = '';
@@ -128,15 +128,12 @@
         angular.forEach(data.photo.exif, function(item, key){
           if( item.tag === 'Make' ){
             make = item.raw._content;
-            item.meta.push(item.raw._content);
           }
           if( item.tag === 'Model' ){
             model = item.raw._content;
-            item.meta.push(item.raw._content);
           }
           if( item.tag === 'LensModel' ){
             lensModel = item.raw._content;
-            item.meta.push(item.raw._content);
           }
         });
 
@@ -146,11 +143,9 @@
           item.exifInfo.Model = model;
         }
 
-        item.meta.push(item.exifInfo.Model);
-
         item.exifInfo.LensModel = lensModel;
 
-        item.meta.push(lensModel);
+        item.meta.push(item.exifInfo.Model, lensModel);
 
         item.exifInfo.finishFetching = true;
       }).error(function(data, status, header, config){
