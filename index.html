@@ -27,7 +27,7 @@
               <img ng-src="{{ pic.url_dpl }}" class="md-card-image" alt="{{ pic.title }}" waitforload show="Ctrlr.show(pic)">
             </md-card>
                 <h3>{{ pic.title }}</h3>
-                <md-chips readonly="true">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</md-chips>
+                <md-chips ng-model="pic.datetaken" readonly="true">{{ pic.datetaken | date:'EEEE, MMM d, y' }}</md-chips>
                 <p ng-show="pic.exifInfo.LensModel.length" metaInfo>
                   <i class="fa fa-camera fa-fw" ng-if="pic.dslr"></i>
                   <i class="fa fa-apple fa-fw" ng-if="pic.ios"></i>
