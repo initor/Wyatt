@@ -159,7 +159,12 @@
         getExifInfo(item.id, item.secret, item);
 
         item.meta = [];
-        item.meta.push(item.datetaken, item.geoInfo, item.exifInfo.Model, item.exifInfo.LensModel);
+        
+        if(item.geoInfo.length){
+          item.meta.push(item.datetaken, item.geoInfo, item.exifInfo.Model, item.exifInfo.LensModel);
+        }else {
+          item.meta.push(item.datetaken, item.exifInfo.Model, item.exifInfo.LensModel);
+        }
 
       });
     }
