@@ -1,211 +1,212 @@
 @font-face {
- 	font-family: "freight-text-pro";
- 	src: url('/Fonts/freight-text-pro_400_italic.ttf');
- 	font-style: italic;
- 	font-weight: 400;
- }
+  font-family: "freight-text-pro";
+  src: url('/Fonts/freight-text-pro_400_italic.ttf');
+  font-style: italic;
+  font-weight: 400;
+}
 
- @font-face {
- 	font-family: "freight-text-pro";
- 	src: url('/Fonts/freight-text-pro_700_italic.ttf');
- 	font-style: italic;
- 	font-weight: 700;
- }
+@font-face {
+  font-family: "freight-text-pro";
+  src: url('/Fonts/freight-text-pro_700_italic.ttf');
+  font-style: italic;
+  font-weight: 700;
+}
 
- @font-face {
- 	font-family: "freight-text-pro";
- 	src: url('/Fonts/freight-text-pro_normal_400.ttf');
- 	font-style: normal;
- 	font-weight: 400;
- }
+@font-face {
+  font-family: "freight-text-pro";
+  src: url('/Fonts/freight-text-pro_normal_400.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
 
- @font-face {
- 	font-family: "freight-text-pro";
- 	src: url('/Fonts/freight-text-pro_normal_700.ttf');
- 	font-style: normal;
- 	font-weight: 700;
- }
+@font-face {
+  font-family: "freight-text-pro";
+  src: url('/Fonts/freight-text-pro_normal_700.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
 
- @font-face {
- 	font-family: "jaf-bernino-sans";
- 	src: url('/Fonts/jaf-bernino-sans_normal_300.ttf');
- 	font-style: normal;
- 	font-weight: 300;
- }
+@font-face {
+  font-family: "jaf-bernino-sans";
+  src: url('/Fonts/jaf-bernino-sans_normal_300.ttf');
+  font-style: normal;
+  font-weight: 300;
+}
 
- @font-face {
- 	font-family: "jaf-bernino-sans";
- 	src: url('/Fonts/jaf-bernino-sans_normal_400.ttf');
- 	font-style: normal;
- 	font-weight: 400;
- }
+@font-face {
+  font-family: "jaf-bernino-sans";
+  src: url('/Fonts/jaf-bernino-sans_normal_400.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
 
- @font-face {
- 	font-family: "jaf-bernino-sans";
- 	src: url('/Fonts/jaf-bernino-sans_normal_700.ttf');
- 	font-style: normal;
- 	font-weight: 700;
- }
+@font-face {
+  font-family: "jaf-bernino-sans";
+  src: url('/Fonts/jaf-bernino-sans_normal_700.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
 
- @font-face {
- 	font-family: "ff-tisa-web-pro";
- 	src: url('/Fonts/ff-tisa-web-pro_italic_400.ttf');
- 	font-style: italic;
- 	font-weight: 400;
- }
+@font-face {
+  font-family: "ff-tisa-web-pro";
+  src: url('/Fonts/ff-tisa-web-pro_italic_400.ttf');
+  font-style: italic;
+  font-weight: 400;
+}
 
- @font-face {
- 	font-family: "ff-tisa-web-pro";
- 	src: url('/Fonts/ff-tisa-web-pro_italic_700.ttf');
- 	font-style: italic;
- 	font-weight: 700;
- }
+@font-face {
+  font-family: "ff-tisa-web-pro";
+  src: url('/Fonts/ff-tisa-web-pro_italic_700.ttf');
+  font-style: italic;
+  font-weight: 700;
+}
 
- @font-face {
- 	font-family: "ff-tisa-web-pro";
- 	src: url('/Fonts/ff-tisa-web-pro_normal_400.ttf');
- 	font-style: normal;
- 	font-weight: 400;
- }
+@font-face {
+  font-family: "ff-tisa-web-pro";
+  src: url('/Fonts/ff-tisa-web-pro_normal_400.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
 
- @font-face {
- 	font-family: "ff-tisa-web-pro";
- 	src: url('/Fonts/ff-tisa-web-pro_normal_700.ttf');
- 	font-style: normal;
- 	font-weight: 700;
- }
+@font-face {
+  font-family: "ff-tisa-web-pro";
+  src: url('/Fonts/ff-tisa-web-pro_normal_700.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
 
- @font-face {
- 	font-family: "freight-sans-pro";
- 	src: url('/Fonts/freight-sans-pro_normal_500.ttf');
- 	font-style: normal;
- 	font-weight: 500;
- }
+@font-face {
+  font-family: "freight-sans-pro";
+  src: url('/Fonts/freight-sans-pro_normal_500.ttf');
+  font-style: normal;
+  font-weight: 500;
+}
 
- @font-face {
- 	font-family: "freight-sans-pro";
- 	src: url('/Fonts/freight-sans-pro_normal_700.ttf');
- 	font-style: normal;
- 	font-weight: 700;
- }
+@font-face {
+  font-family: "freight-sans-pro";
+  src: url('/Fonts/freight-sans-pro_normal_700.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
 
- html, body {
- 	background-color: #f2f2f2;
- }
+html, body {
+  background-color: #f2f2f2;
+}
 
- html {
- 	font-size: 100%;
- }
+html {
+  font-size: 100%;
+}
 
- body {
- 	color: #333;
- 	font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
- 	letter-spacing: -0.02em;
- 	font-weight: 400;
- 	font-style: normal;
- 	text-rendering: optimizeLegibility;
- 	-webkit-font-smoothing: antialiased;
- 	-moz-osx-font-smoothing: grayscale;
- 	-moz-font-feature-settings: "liga" on;
- 	line-height: 1.4;
- }
+body {
+  color: #333;
+  font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  line-height: 1.4;
+}
 
- .tile {
- 	border-top-left-radius: 2px;
- 	border-top-right-radius: 2px;
- 	border-bottom-right-radius: 2px;
- 	border-bottom-left-radius: 2px;
- 	background-color: #fff;
- }
+.tile {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  background-color: #fff;
+}
 
- .tile md-card {
- 	padding: 0px;
- 	margin-top: 0px;
- }
+.tile md-card {
+  padding: 0px;
+  margin-top: 0px;
+}
 
- .tile-header, .tile-footer {
- 	padding-left: 10px;
- }
+.tile-header, .tile-footer {
+  padding-left: 10px;
+}
 
- .tile-header {
- 	line-height: 44px;
- }
+.tile-header {
+  line-height: 44px;
+}
 
- .tile-header p{
-   font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-   font-style: normal;
-   text-transform: uppercase;
-   color: rgba(0,0,0,0.3);
-   white-space: nowrap;
-   color: #d6d6d6;
-   letter-spacing: -0.02em;
- }
+.tile-header p{
+  font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.3);
+  white-space: nowrap;
+  color: #d6d6d6;
+  letter-spacing: -0.02em;
+}
 
 [metaInfo] {
-   margin-top: -20px;
- }
+  margin-top: -20px;
+}
 
- .tile-header p span {
-   font-size: .75em;
- }
+.tile-header p span {
+  font-size: .75em;
+}
 
- .tile-footer {
- 	font-size: 1em;
- 	font-weight: normal;
- 	font-style: normal;
- 	margin-top: 20px;
- }
+.tile-footer {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 20px;
+}
 
- .tile-footer h3 {
- 	font-size: 2em;
- 	line-height: 1.125;
- 	font-weight: 200;
- 	margin: 0px;
- }
+.tile-footer h3 {
+  font-size: 2em;
+  line-height: 1.125;
+  font-weight: 200;
+  margin: 0px;
+}
 
- .pLinear {
- 	margin-bottom: 20px;
- 	margin-top: 10px !important;
- }
+.pLinear {
+  margin-bottom: 20px;
+  margin-top: 10px !important;
+}
 
- .md-card-image {
- 	border-radius: 2px !important;
- }
+.md-card-image {
+  border-top-left-radius: 2px !important;
+  border-top-right-radius: 2px !important;
+}
 
- .avatarCard {
- 	border-radius: 64px !important;
-	height: 128px;
-	width: 128px;
-	padding-left: 0px;
-	padding-top: 0px;
- }
+.avatarCard {
+  border-radius: 64px !important;
+  height: 128px;
+  width: 128px;
+  padding-left: 0px;
+  padding-top: 0px;
+}
 
- .avatarCard img {
- 	border-radius: 512px !important;
- 	width: 128px;
- }
+.avatarCard img {
+  border-radius: 512px !important;
+  width: 128px;
+}
 
 .w_card {
   margin-top: 10px !important;
 }
 
- md-whiteframe {
- 	background-color: #fff;
-	z-index: 999;
-	border-radius: 2px !important;
+md-whiteframe {
+  background-color: #fff;
+  z-index: 999;
+  border-radius: 2px !important;
   padding-top: 16px !important;
- }
+}
 
- md-whiteframe md-content {
- 	background-color: transparent !important;
- }
+md-whiteframe md-content {
+  background-color: transparent !important;
+}
 
- md-whiteframe p span {
- 	color: #08c !important;
- }
+md-whiteframe p span {
+  color: #08c !important;
+}
 
- [layout-fill-width-only-Wyatt] {
-   margin: 0;
-   /* min-height: 100%; */
-   width: 100%;
- }
+[layout-fill-width-only-Wyatt] {
+  margin: 0;
+  /* min-height: 100%; */
+  width: 100%;
+}
