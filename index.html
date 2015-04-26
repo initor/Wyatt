@@ -13,24 +13,22 @@
   <link rel="stylesheet" type="text/css" href="CSS/reset.css">
 </head>
 <body ng-app="WyattIn">
-  <div ng-controller="PortraitsCtrlr as Ctrlr">
+  <div ng-controller="PortraitsCtrlr as ctl">
 
-    <md-grid-list md-cols-sm="1" md-cols-gt-md="3" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
-      <md-grid-tile ng-repeat="p in Ctrlr.pictures">
+    <md-grid-list md-cols-sm="1" md-cols-gt-md="3" infinite-scroll="ctl.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
+      <md-grid-tile ng-repeat="p in ctl.pictures">
 
           <!-- Each pic -->
-          <div layout="row" layout-sm="column" layout-align="center center" ng-hide="p.loaded">
-              <md-progress-circular class="md-warn" md-mode="indeterminate"></md-progress-circular>
-          </div>
+          <md-progress-circular class="md-warn" md-mode="indeterminate" ng-hide="p.loaded"></md-progress-circular>
 
           <div ng-show="p.loaded">
             <md-card class="w_card">
-              <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}" waitforload show="Ctrlr.show(p)">
+              <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}" waitforload show="ctl.show(p)">
             </md-card>
           </div>
 
           <md-content class="md-padding" layout="column">
-            <md-chips ng-model="p.meta" class="metaChips" readonly="Ctrlr.readonly">
+            <md-chips ng-model="p.meta" class="metaChips" readonly="ctl.readonly">
             </md-chips>
           </md-content>
 
