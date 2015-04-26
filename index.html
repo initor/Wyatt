@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="CSS/reset.css">
 </head>
 <body ng-app="WyattIn">
-  <div ng-controller="PortraitsCtrlr as ctl" infinite-scroll="ctl.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
+  <div ng-controller="PortraitsCtrlr as ctl">
 
     <md-grid-list md-cols-sm="1" md-cols-gt-md="3">
       <md-grid-tile ng-repeat="p in ctl.pictures">
