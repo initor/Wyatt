@@ -91,6 +91,7 @@
         angular.forEach(pics, function(item, key){
           ctl.pictures.push(item);
         });
+        
       }
 
       ctl.loadingLinear = false;
