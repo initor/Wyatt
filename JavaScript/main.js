@@ -29,7 +29,7 @@
         item.datetaken = new Date(item.datetaken.split(" ")[0]);
 
         item.meta = [];
-        item.meta.push(item.datetaken);
+        item.meta.push($filter('date')(item.datetaken, 'EEEE, MMMM d, y'));
 
         // Handle picture resolution differences
         var url_dpl = '';
