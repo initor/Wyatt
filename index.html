@@ -19,14 +19,14 @@
 
       <md-grid-tile ng-repeat="p in ctl.originalLoads" md-rowspan="{{ p.row }}" md-colspan="{{ p.col }}" class="greyGridTile">
 
-        <md-content ng-show="pic.loaded">
+        <md-content ng-show="p.loaded">
           <md-card class="w_card">
-            <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}" waitforload show="ctl.show(pic)">
+            <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}" waitforload show="ctl.show(p)">
           </md-card>
         </md-content>
 
         <md-grid-tile-footer>
-          <div layout="row" layout-sm="column" layout-align="center center" ng-hide="pic.loaded">
+          <div layout="row" layout-sm="column" layout-align="center center" ng-hide="p.loaded">
               <md-progress-circular class="md-warn" md-mode="indeterminate"></md-progress-circular>
           </div>
         </md-grid-tile-footer>
