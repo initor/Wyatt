@@ -75,27 +75,6 @@
     }).error(function(data, status, header, config){
     });
 
-    this.loadItems = function(){
-      ctl.loadingLinear = true;
-
-      if(ctl.originalLoads.length < 6){
-        var pics = ctl.originalLoads.splice(0, ctl.originalLoads.length);
-
-        angular.forEach(pics, function(item, key){
-          ctl.pictures.push(item);
-        });
-
-      }else{
-        var pics = ctl.originalLoads.splice(0, 6);
-
-        angular.forEach(pics, function(item, key){
-          ctl.pictures.push(item);
-        });
-        
-      }
-
-      ctl.loadingLinear = false;
-    };
 
     ctl.show = function(pic){
       pic.loaded = true;

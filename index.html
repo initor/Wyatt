@@ -16,7 +16,7 @@
   <div ng-controller="PortraitsCtrlr as ctl">
 
     <md-grid-list md-cols-sm="1" md-cols-gt-md="3">
-      <md-grid-tile ng-repeat="p in ctl.pictures">
+      <md-grid-tile ng-repeat="p in ctl.originalLoads">
 
           <!-- Each pic -->
           <md-progress-circular class="md-warn" md-mode="indeterminate" ng-hide="p.loaded"></md-progress-circular>
