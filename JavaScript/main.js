@@ -21,6 +21,7 @@
     ctl.loadingLinear = true;
     ctl.pictures = [];
     ctl.originalLoads = [];
+    ctl.readonly = true;
 
     $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=eb6e83fd2b255ab9adfef687f4c18e63&photoset_id=72157649472095227&extras=url_c%2C+camera%2C+url_k%2C+url_z%2C+url_h%2C+geo%2C+description%2C+date_taken&format=json&nojsoncallback=1')
     .success(function(data, status, header, config){
