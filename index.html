@@ -28,14 +28,10 @@
             </md-card>
             <md-content class="md-padding" layout="column">
               <md-chips ng-model="pic">
-                <md-chip-template>
-                  <span>
-                    <strong>{{ pic.datetaken | date:'EEEE, MMM d, y' }}</strong>
-                    <em>({{ pic.exifInfo.Model }})</em>
-                    <em>({{ pic.exifInfo.LensModel }})</em>
-                    <em>({{ pic.geoInfo }})</em>
-                  </span>
-                </md-chip-template>
+                <md-chip>{{ pic.datetaken | date:'EEEE, MMM d, y' }}</md-chip>
+                <md-chip>{{ pic.exifInfo.Model }}</md-chip>
+                <md-chip>{{ pic.exifInfo.LensModel }}</md-chip>
+                <md-chip>{{ pic.geoInfo }}</md-chip>
               </md-chips>
             </md-content>
           </div>
