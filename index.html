@@ -25,12 +25,10 @@
           <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}">
         </md-card>
 
-        <md-content class="md-padding">
+        <md-grid-tile-footer>
           <md-chips ng-model="p.meta" class="metaChips" readonly="ctl.readonly">
           </md-chips>
-        </md-content>
-
-        <md-grid-tile-footer><h3>Footer</h3></md-grid-tile-footer>
+        </md-grid-tile-footer>
       </md-grid-tile>
 
     </md-grid-list>
