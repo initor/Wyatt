@@ -85,7 +85,9 @@
           ctl.pictures.push(ctl.originalLoads.splice(0,1));
         }
       }else{
-          ctl.pictures.push(ctl.originalLoads.splice(0,6));
+        for(var i = 0; i < 6; i++){
+          ctl.pictures.push(ctl.originalLoads.splice(0,1));
+        }
       }
 
       ctl.loadingLinear = false;
