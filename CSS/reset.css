@@ -189,8 +189,13 @@ body {
   margin-top: 10px !important;
 }
 
-.metaChips md-chip span {
-  
+.md-chips .md-chip {
+  height: 1.8rem;
+  line-height: 1.8rem;
+}
+
+.md-chips {
+  font-size: 1rem;
 }
 
 md-whiteframe {
