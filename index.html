@@ -13,28 +13,24 @@
   <link rel="stylesheet" type="text/css" href="CSS/reset.css">
 </head>
 <body ng-app="WyattIn">
-  <div ng-controller="PortraitsCtrlr as ctl">
+  <div ng-controller="PortraitsCtrlr as ctl" flex>
 
-    <md-grid-list md-cols-sm="1" md-cols-gt-md="3">
+    <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6">
+
       <md-grid-tile ng-repeat="p in ctl.originalLoads">
 
-          <!-- Each pic -->
-          <md-progress-circular class="md-warn" md-mode="indeterminate" ng-hide="p.loaded"></md-progress-circular>
+        <md-card class="w_card">
+          <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}">
+        </md-card>
 
-            <md-card class="w_card">
-              <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}">
-            </md-card>
+        <md-content class="md-padding">
+          <md-chips ng-model="p.meta" class="metaChips" readonly="ctl.readonly">
+          </md-chips>
+        </md-content>
 
-          <md-content class="md-padding" layout="column">
-            <md-chips ng-model="p.meta" class="metaChips" readonly="ctl.readonly">
-            </md-chips>
-          </md-content>
-
-        <md-grid-tile-footer>
-          <h3>Footer</h3>
-        </md-grid-tile-footer>
-
+        <md-grid-tile-footer><h3>Footer</h3></md-grid-tile-footer>
       </md-grid-tile>
+
     </md-grid-list>
 
   </div>
