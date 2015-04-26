@@ -14,7 +14,7 @@
       };
   });
 
-  app.controller('PortraitsCtrlr', ['$http', '$sce', function($http, $sce){
+  app.controller('PortraitsCtrlr', ['$http', '$sce', '$filter', function($http, $sce, $filter){
     var ctl = this;
 
     // Initialize loadingLinear show boolean
