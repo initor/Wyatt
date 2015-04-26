@@ -27,8 +27,6 @@
     .success(function(data, status, header, config){
       angular.forEach(data.photoset.photo, function(item, key){
 
-        item.datetaken = new Date(item.datetaken.split(" ")[0]);
-
         item.meta = [];
         item.meta.push($filter('date')(item.datetaken, 'EEEE, MMMM d, y'));
 
