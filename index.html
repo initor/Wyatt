@@ -21,9 +21,11 @@
 
       <md-grid-tile ng-repeat="p in ctl.originalLoads" class="greyGridTile">
 
-        <md-card class="w_card">
-          <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}">
-        </md-card>
+        <md-content>
+          <md-card class="w_card">
+            <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}">
+          </md-card>
+        </md-content>
 
         <md-grid-tile-footer>
             123
