@@ -79,11 +79,9 @@
       ctl.loadingLinear = true;
 
       if(ctl.originalLoads.length < 6){
-        while(ctl.originalLoads.length){
-          ctl.pictures.push(ctl.originalLoads.splice(0,1));
-        }
+        ctl.pictures.push(ctl.originalLoads.splice(0, ctl.originalLoads.length));
       }else{
-          ctl.pictures.push(ctl.originalLoads.splice(0,6));
+        ctl.pictures.push(ctl.originalLoads.splice(0, 6));
       }
 
       ctl.loadingLinear = false;
