@@ -82,7 +82,7 @@
 
       if(ctl.originalLoads.length < 6){
         while(ctl.originalLoads.length){
-          ctl.pictures.push(ctl.originalLoads.splice(0,3));
+          ctl.pictures.push(ctl.originalLoads.splice(0,1));
         }
       }else{
         for(var i = 0; i < 2; i++){
