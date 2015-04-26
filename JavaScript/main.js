@@ -28,6 +28,9 @@
 
         item.datetaken = new Date(item.datetaken.split(" ")[0]);
 
+        item.meta = [];
+        item.meta.push(item.datetaken);
+
         // Handle picture resolution differences
         var url_dpl = '';
         if(item.url_k){
@@ -107,7 +110,9 @@
     function getGeoInfo(pId, wId, item){
       var geoApiUrl = generateGeoApiUrl(pId, wId);
       $http.get(geoApiUrl).success(function(data, status, header, config){
-        item.geoInfo = {}; //data.place.locality._content
+        item.geoInfo = data.place.locality._content;
+
+        item.meta.push(item.geoInfo);
         item.geoInfo.finishFetching = true;
 
       }).error(function(data, status, header, config){
@@ -145,7 +150,10 @@
 
         item.exifInfo.LensModel = lensModel;
 
+        item.meta.push(item.exifInfo.LensModel);
+
         item.exifInfo.finishFetching = true;
+
       }).error(function(data, status, header, config){
         return status;
       });
