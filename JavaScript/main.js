@@ -110,7 +110,12 @@
     function getGeoInfo(pId, wId, item){
       var geoApiUrl = generateGeoApiUrl(pId, wId);
       $http.get(geoApiUrl).success(function(data, status, header, config){
-        item.geoInfo = data.place.locality._content;
+
+        item.geoInfo = {};
+
+        if(!angular.isUndefined(data.place.locality) && data.place.locality !== null){
+          item.geoInfo = data.place.locality._content;
+        }
 
         item.meta.push(item.geoInfo);
         item.geoInfo.finishFetching = true;
