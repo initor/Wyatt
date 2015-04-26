@@ -15,13 +15,13 @@
 <body ng-app="WyattIn">
   <div ng-controller="PortraitsCtrlr as ctl" flex>
 
-    <md-grid-list md-cols-sm="1" md-cols-gt-md="3" md-row-height="1:2" md-gutter="6px">
+    <md-grid-list md-cols-sm="1" md-cols-gt-md="3" md-row-height="1:1" md-gutter="6px">
 
-      <md-grid-tile ng-repeat="p in ctl.originalLoads" class="greyGridTile">
+      <md-grid-tile ng-repeat="p in ctl.originalLoads" md-rowspan="{{ p.row }}" md-colspan="{{ p.col }}" class="greyGridTile">
 
         <md-content>
           <md-card class="w_card">
-            <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}">
+            <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}" waitforload show="ctl.show(pic)">
           </md-card>
         </md-content>
 
