@@ -85,9 +85,7 @@
           ctl.pictures.push(ctl.originalLoads.splice(0,1));
         }
       }else{
-        for(var i = 0; i < 2; i++){
-          ctl.pictures.push(ctl.originalLoads.splice(0,3));
-        }
+          ctl.pictures.push(ctl.originalLoads.splice(0,6));
       }
 
       ctl.loadingLinear = false;

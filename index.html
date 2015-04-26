@@ -17,8 +17,8 @@
     <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
 
       <!-- Pair in a row -->
-      <div layout="column" layout-gt-md="row" layout-fill-width-only-Wyatt layout-margin flex ng-repeat="picArr in Ctrlr.pictures">
-        <div class="tile" flex ng-repeat="pic in picArr">
+      <div layout="column" layout-gt-md="row" layout-fill-width-only-Wyatt layout-margin flex ng-repeat="pic in Ctrlr.pictures">
+        <div class="tile" flex="33">
           <div layout="row" layout-sm="column" layout-align="center center" ng-hide="pic.loaded">
               <md-progress-circular class="md-warn" md-mode="indeterminate"></md-progress-circular>
           </div>
