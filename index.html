@@ -27,7 +27,10 @@
               <img ng-src="{{ pic.url_dpl }}" class="md-card-image" alt="{{ pic.title }}" waitforload show="Ctrlr.show(pic)">
             </md-card>
             <md-content class="md-padding" layout="column">
-              <md-chips ng-model="pic" ng-readonly="true">
+              <md-chips>
+                <md-chip>geo</md-chip>
+                <md-chip>pic</md-chip>
+                <md-chip>date</md-chip>
                 <md-chip>{{ pic.datetaken | date:'EEEE, MMM d, y' }}</md-chip>
                 <md-chip>{{ pic.exifInfo.Model }}</md-chip>
                 <md-chip>{{ pic.exifInfo.LensModel }}</md-chip>
