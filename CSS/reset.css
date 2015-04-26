@@ -189,6 +189,10 @@ body {
   margin-top: 10px !important;
 }
 
+.metaChips md-chip span {
+  
+}
+
 md-whiteframe {
   background-color: #fff;
   z-index: 999;
