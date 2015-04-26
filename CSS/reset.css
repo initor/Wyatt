@@ -192,12 +192,12 @@ body {
 .md-chips .md-chip {
   height: 1.8rem;
   line-height: 1.8rem;
-  font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans", Geneva, Verdana, sans-serif;
   letter-spacing: -0.03em;
 }
 
 .md-chips {
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 md-whiteframe {
