@@ -79,9 +79,18 @@
       ctl.loadingLinear = true;
 
       if(ctl.originalLoads.length < 6){
-        ctl.pictures.push(ctl.originalLoads.splice(0, ctl.originalLoads.length));
+        var pics = ctl.originalLoads.splice(0, ctl.originalLoads.length);
+
+        angular.forEach(pics, function(item, key){
+          ctl.pictures.push(item);
+        });
+
       }else{
-        ctl.pictures.push(ctl.originalLoads.splice(0, 6));
+        var pics = ctl.originalLoads.splice(0, 6);
+
+        angular.forEach(pics, function(item, key){
+          ctl.pictures.push(item);
+        });
       }
 
       ctl.loadingLinear = false;
