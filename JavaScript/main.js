@@ -28,7 +28,7 @@
       angular.forEach(data.photoset.photo, function(item, key){
 
         var dateMeta = new Date(item.datetaken.split(" ")[0]);
-
+        item.loaded = false;
         item.meta = [];
         item.meta.push($filter('date')(dateMeta, 'EEEE, MMMM d, y'));
 
@@ -77,6 +77,7 @@
 
 
     ctl.show = function(pic){
+
       pic.loaded = true;
     }
 
