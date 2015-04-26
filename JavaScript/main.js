@@ -156,7 +156,9 @@
 
         item.exifInfo.LensModel = lensModel;
 
-        item.meta.push(item.exifInfo.LensModel);
+        if(item.exifInfo.LensModel.length>0){
+          item.meta.push(item.exifInfo.LensModel);
+        }
 
         item.exifInfo.finishFetching = true;
 
