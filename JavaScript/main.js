@@ -27,10 +27,10 @@
     .success(function(data, status, header, config){
       angular.forEach(data.photoset.photo, function(item, key){
 
-        var dateMeta = new Date(item.datetaken.split(" ")[0]);
-        item.loaded = false;
+        item.datetaken = new Date(item.datetaken.split(" ")[0]);
+
         item.meta = [];
-        item.meta.push($filter('date')(dateMeta, 'EEEE, MMMM d, y'));
+        item.meta.push($filter('date')(item.datetaken, 'EEEE, MMMM d, y'));
 
         // Handle picture resolution differences
         var url_dpl = '';
@@ -71,13 +71,29 @@
       });
 
       ctl.loadingLinear = false;
-
+      for(var i = 0; i < 3; i++){
+        ctl.pictures.push(ctl.originalLoads.splice(0,2));
+      }
     }).error(function(data, status, header, config){
     });
 
+    this.loadItems = function(){
+      ctl.loadingLinear = true;
+
+      if(ctl.originalLoads.length < 6){
+        while(ctl.originalLoads.length){
+          ctl.pictures.push(ctl.originalLoads.splice(0,2));
+        }
+      }else{
+        for(var i = 0; i < 3; i++){
+          ctl.pictures.push(ctl.originalLoads.splice(0,2));
+        }
+      }
+
+      ctl.loadingLinear = false;
+    };
 
     ctl.show = function(pic){
-
       pic.loaded = true;
     }
 
@@ -100,11 +116,9 @@
 
         if(!angular.isUndefined(data.place.locality) && data.place.locality !== null){
           item.geoInfo = data.place.locality._content;
-        }
-
-        if(item.geoInfo.length>0){
           item.meta.push(item.geoInfo);
         }
+
         item.geoInfo.finishFetching = true;
 
       }).error(function(data, status, header, config){
@@ -142,9 +156,7 @@
 
         item.exifInfo.LensModel = lensModel;
 
-        if(item.exifInfo.LensModel.length>0){
-          item.meta.push(item.exifInfo.LensModel);
-        }
+        item.meta.push(item.exifInfo.LensModel);
 
         item.exifInfo.finishFetching = true;
 
@@ -153,7 +165,7 @@
       });
     }
 
-    // Set meta info of each pic
+    // Handle array of pairs of pics
     function setMetaInfo(arrayOfPics){
       angular.forEach(arrayOfPics, function(item, key){
         if(item.place_id && item.woeid){
@@ -162,6 +174,5 @@
         getExifInfo(item.id, item.secret, item);
       });
     }
-
   }]);
 })();
