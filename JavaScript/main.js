@@ -71,8 +71,8 @@
       });
 
       ctl.loadingLinear = false;
-      for(var i = 0; i < 3; i++){
-        ctl.pictures.push(ctl.originalLoads.splice(0,2));
+      for(var i = 0; i < 2; i++){
+        ctl.pictures.push(ctl.originalLoads.splice(0,3));
       }
     }).error(function(data, status, header, config){
     });
