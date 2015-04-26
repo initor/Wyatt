@@ -115,9 +115,9 @@
 
         if(!angular.isUndefined(data.place.locality) && data.place.locality !== null){
           item.geoInfo = data.place.locality._content;
+          item.meta.push(item.geoInfo);
         }
 
-        item.meta.push(item.geoInfo);
         item.geoInfo.finishFetching = true;
 
       }).error(function(data, status, header, config){
