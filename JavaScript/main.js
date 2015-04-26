@@ -30,7 +30,7 @@
         var dateMeta = new Date(item.datetaken.split(" ")[0]);
 
         item.meta = [];
-        item.meta.push($filter('date')(dateMeta, 'EEEE, MMMM d, y'));
+        item.meta.push('<i class="fa fa-clock-o"></i> ' + $filter('date')(dateMeta, 'EEEE, MMMM d, y'));
 
         // Handle picture resolution differences
         var url_dpl = '';
