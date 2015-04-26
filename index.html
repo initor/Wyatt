@@ -21,11 +21,9 @@
           <!-- Each pic -->
           <md-progress-circular class="md-warn" md-mode="indeterminate" ng-hide="p.loaded"></md-progress-circular>
 
-          <div ng-show="p.loaded">
             <md-card class="w_card">
               <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}">
             </md-card>
-          </div>
 
           <md-content class="md-padding" layout="column">
             <md-chips ng-model="p.meta" class="metaChips" readonly="ctl.readonly">
