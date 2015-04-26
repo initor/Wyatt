@@ -14,42 +14,33 @@
 </head>
 <body ng-app="WyattIn">
   <div ng-controller="PortraitsCtrlr as Ctrlr">
-    <div layout="column" layout-align="space-around center" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
 
-      <!-- Pair in a row -->
-      <div layout="column" layout-gt-md="row" layout-fill-width-only-Wyatt layout-margin flex ng-repeat="picArr in Ctrlr.pictures">
-        <div class="tile" flex ng-repeat="pic in picArr">
-          <div layout="row" layout-sm="column" layout-align="center center" ng-hide="pic.loaded">
+    <md-grid-list md-cols-sm="1" md-cols-gt-md="3" infinite-scroll="Ctrlr.loadItems()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true">
+      <md-grid-tile ng-repeat="p in Ctrlr.pictures">
+
+          <!-- Each pic -->
+          <div layout="row" layout-sm="column" layout-align="center center" ng-hide="p.loaded">
               <md-progress-circular class="md-warn" md-mode="indeterminate"></md-progress-circular>
           </div>
-          <div ng-show="pic.loaded">
+
+          <div ng-show="p.loaded">
             <md-card class="w_card">
-              <img ng-src="{{ pic.url_dpl }}" class="md-card-image" alt="{{ pic.title }}" waitforload show="Ctrlr.show(pic)">
+              <img ng-src="{{ p.url_dpl }}" class="md-card-image" alt="{{ p.title }}" waitforload show="Ctrlr.show(p)">
             </md-card>
           </div>
+
           <md-content class="md-padding" layout="column">
-            <md-chips ng-model="pic.meta" class="metaChips" readonly="Ctrlr.readonly">
+            <md-chips ng-model="p.meta" class="metaChips" readonly="Ctrlr.readonly">
             </md-chips>
           </md-content>
-        </div>
-      </div>
 
-      <!-- Loading linear -->
-      <div layout="column" layout-fill class="pLinear" ng-show="Ctrlr.originalLoads.length">
-        <md-progress-linear md-mode="indeterminate"></md-progress-linear>
-      </div>
+        <md-grid-tile-footer>
+          <h3>Footer</h3>
+        </md-grid-tile-footer>
 
-      <!-- End point of page -->
-      <div layout="column" layout-fill layout-margin ng-hide="Ctrlr.originalLoads.length">
-        <md-whiteframe flex class="md-whiteframe-z1" layout="column" layout-align="center center">
-          <md-card class="avatarCard">
-            <img src="Images/selfie.jpg" class="md-card-image">
-          </md-card>
-          <p>Born on <span>Dec 28, 2011</span></p>
-        </md-whiteframe>
-      </div>
+      </md-grid-tile>
+    </md-grid-list>
 
-    </div>
   </div>
 
   <!-- JavaScript code and libraries go here to improve loading performance -->

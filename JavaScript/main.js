@@ -71,9 +71,7 @@
       });
 
       ctl.loadingLinear = false;
-      for(var i = 0; i < 3; i++){
-        ctl.pictures.push(ctl.originalLoads.splice(0,2));
-      }
+
     }).error(function(data, status, header, config){
     });
 
@@ -82,12 +80,10 @@
 
       if(ctl.originalLoads.length < 6){
         while(ctl.originalLoads.length){
-          ctl.pictures.push(ctl.originalLoads.splice(0,2));
+          ctl.pictures.push(ctl.originalLoads.splice(0,1));
         }
       }else{
-        for(var i = 0; i < 3; i++){
-          ctl.pictures.push(ctl.originalLoads.splice(0,2));
-        }
+        ctl.pictures.push(ctl.originalLoads.splice(0,7));
       }
 
       ctl.loadingLinear = false;
@@ -169,7 +165,7 @@
       });
     }
 
-    // Handle array of pairs of pics
+    // Set meta info of each pic
     function setMetaInfo(arrayOfPics){
       angular.forEach(arrayOfPics, function(item, key){
         if(item.place_id && item.woeid){
@@ -178,5 +174,6 @@
         getExifInfo(item.id, item.secret, item);
       });
     }
+
   }]);
 })();
